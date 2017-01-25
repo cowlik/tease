@@ -1,0 +1,12 @@
+﻿- var page = current.path[0]
+
+if environment == "production"
+    link(rel="stylesheet", href="/css/tease.min.css")
+
+    if page == "index"
+        //link(rel="stylesheet", href="/css/cw-home.min.css")
+else
+    link(rel="stylesheet", href="/css/tease.css")
+
+    if page == "index"
+        //link(rel="stylesheet", href="/css/cw-home.css")

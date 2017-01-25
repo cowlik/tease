@@ -4,9 +4,7 @@
 
 @import '_partials/font-face';
 @import '_partials/normalize';
+@import '_partials/variables';
 
-body {
-    font-family: 'TypewriterSerial', serif;
-    font-weight: normal;
-	font-style: normal;
-}
+@import '_shared/layout';
+@import '_shared/header';
