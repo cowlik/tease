@@ -2,22 +2,41 @@
 // --------------------------------------------------
 
 header {
-    height: 30px;
-    line-height: 30px;
-    background-color: $color-red;
+    height: 45px;
+    line-height: 45px;
+    padding-right: $spacing-min;
+    padding-left: $spacing-min;
+    background-color: $color-orange-dark;
     right: 0;
     left: 0;
     position: fixed;
+    z-index: 2;
 
     a {
-        font-size: 14px;
+        font-size: 15px;
         color: #fff;
         float: left;
 
         &.fa-bars {
-            line-height: 30px;
-            font-size: 20px;
+            line-height: 45px;
+            font-size: 24px;
             float: right;
+        }
+    }
+
+    @media (min-width: $screen-med) {
+        height: 60px;
+        line-height: 60px;
+        padding-right: $spacing-max;
+        padding-left: $spacing-max;
+
+        a {
+            font-size: 20px;
+
+            &.fa-bars {
+                line-height: 60px;
+                font-size: 26px;
+            }
         }
     }
 }

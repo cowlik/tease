@@ -21,6 +21,8 @@ body {
     font-family: 'TypewriterSerial', serif;
     font-weight: normal;
 	font-style: normal;
+    display: flex;
+    flex-direction: column;
 }
 
 h1,
@@ -51,11 +53,22 @@ img {
 }
 
 header,
-main {
+main,
+footer {
     width: 100%;
     min-width: $screen-min;
     max-width: $screen-max;
     margin: 0 auto;
+    overflow-x: hidden;
+}
+
+main {
+    flex: 1 0 auto;
+    position: relative;
+    z-index: 0;
+}
+
+.container {
     padding-right: $spacing-min;
     padding-left: $spacing-min;
 

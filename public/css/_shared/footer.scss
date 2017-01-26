@@ -1,0 +1,75 @@
+// footer
+// --------------------------------------------------
+
+footer {
+    padding: $spacing-min $spacing-min ($spacing-min * 2);
+    line-height: 140%;
+    color: #fff;
+    font-size: 13px;
+    background-color: $color-gray-dark;
+    display: table;
+    position: relative;
+    z-index: 1;
+
+    a {
+        color: #fff;
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+            color: #ccc;
+        }
+    }
+
+    > div {
+        vertical-align: top;
+        display: table-cell;
+
+        &:last-child {
+            text-align: right;
+        }
+    }
+
+    .fa-phone-square,
+    .fa-envelope-square {
+        margin-right: 7px;
+        font-size: 16px;
+    }
+
+    .fa-facebook-square,
+    .fa-twitter-square,
+    .fa-instagram {
+        margin-left: 12px;
+        font-size: 30px;
+    }
+
+    @media (min-width: $screen-med) {
+        padding: 30px $spacing-max ($spacing-max + $spacing-min);
+        font-size: 15px;
+
+        .fa-phone-square,
+        .fa-envelope-square {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        .fa-facebook-square,
+        .fa-twitter-square,
+        .fa-instagram {
+            margin-left: 15px;
+            font-size: 32px;
+        }
+    }
+
+    @media (min-width: $screen-max) {
+        padding-top: $spacing-max;
+    }
+}
+
+.footer-copyright {
+    color: #ddd;
+    font-size: 11px;
+
+    @media (min-width: $screen-med) {
+        font-size: 13px;
+    }
+}

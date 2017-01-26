@@ -1,0 +1,34 @@
+// home
+// --------------------------------------------------
+
+@import '_partials/variables';
+
+#layers {
+    height: 100%;
+    perspective: 1px;
+    position: relative;
+}
+
+.layer-front {
+    width: 100%;
+    height: 75vh;
+    padding: $spacing-min;
+    text-align: center;
+}
+
+.layer-back {
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &:nth-child(1) {
+        background-image: url("#{$path-imgs}interior.jpg");
+    }
+
+    &:nth-child(3) {
+        background-image: url("#{$path-imgs}jars.jpg");
+    }
+}
