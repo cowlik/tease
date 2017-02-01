@@ -12,8 +12,8 @@
 
 .layer-front {
     width: 100%;
-    height: 100%;
-    min-height: 100vh;
+    height: auto;
+    padding: ($spacing-max * 2) 0;
     text-align: center;
     overflow: hidden;
     position: relative;
@@ -21,7 +21,8 @@
 
 .layer-back {
     width: 100%;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -35,6 +36,10 @@
     &:nth-child(3) {
         background-image: url("#{$path-imgs}home/jars.jpg");
     }
+
+    .mobile & {
+        background-attachment: scroll;
+    }
 }
 
 #logo {
@@ -46,33 +51,32 @@
 }
 
 #intro {
-    @include align-center();
+    @include align-horizontal();
     width: 100%;
     max-width: 800px;
     height: auto;
-    padding: 0 12px 20%;
+    padding: $spacing-max 12px 30%;
     position: relative;
 
     &:before {
+        @include align-horizontal();
+        width: 25%;
         content: "";
-        opacity: 0.1;
+        opacity: 0.2;
         background: url("#{$path-imgs}ornament.svg") no-repeat bottom center;
         top: 0;
-        left: 0;
         bottom: 0;
-        right: 0;
-        position: absolute;
         z-index: -1;
     }
     
     a {
         width: auto;
-        padding: 4% 7%;
+        padding: 3% 6% 2.5%;
         background-color: rgba(256,256,256,0.5);
         border: 2px solid $color-orange-dark;
         color: $color-orange-dark;
         font-size: 16px;
-        font-size: 5vw;
+        font-size: 4.8vw;
         display: inline-block;
         transition: background-color 0.2s ease-in-out;
 
@@ -97,11 +101,19 @@
     @media (min-width: $screen-med) {
         padding-right: 24px;
         padding-left: 24px;
+    }
+
+    @media (min-width: 800px) {
+        padding-bottom: 240px;
+
+        &:before {
+            left: 50%;
+        }
 
         a {
-            width: 308px;
-            height: 106px;
-            line-height: 106px;
+            width: 294px;
+            height: 90px;
+            line-height: 90px;
             padding: 0;
             font-size: 38px;
         }

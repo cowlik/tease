@@ -17,7 +17,7 @@ gulp.task("minify:css", function() {
 });
 
 gulp.task("minify:js", function() {
-    return gulp.src("www/js/*.js")
+    return gulp.src(["www/js/*.js", "!www/js/jquery*.js"])
         .pipe(vinylPaths(del))
         .pipe(uglify())
         .pipe(rename({ suffix: ".min" }))

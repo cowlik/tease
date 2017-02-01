@@ -1,0 +1,11 @@
+- var category = current.path[0]
+
+if environment == "production"
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+    script(src="/js/tease.min.js")
+
+    if category == "index"
+        //script(src="/js/home.js")
+else
+    script(src="/js/jquery-3.1.1.js")
+    script(src="/js/tease.js")

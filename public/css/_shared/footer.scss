@@ -5,7 +5,7 @@ footer {
     padding: $spacing-min $spacing-min ($spacing-min * 2);
     line-height: 140%;
     color: #fff;
-    font-size: 13px;
+    font-size: 14px;
     background-color: $color-gray-dark;
     display: table;
     position: relative;
@@ -32,7 +32,7 @@ footer {
     .fa-phone-square,
     .fa-envelope-square {
         margin-right: 7px;
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .fa-facebook-square,
@@ -44,19 +44,19 @@ footer {
 
     @media (min-width: $screen-med) {
         padding: 30px $spacing-max ($spacing-max + $spacing-min);
-        font-size: 15px;
+        font-size: 16px;
 
         .fa-phone-square,
         .fa-envelope-square {
             margin-right: 10px;
-            font-size: 18px;
+            font-size: 20px;
         }
 
         .fa-facebook-square,
         .fa-twitter-square,
         .fa-instagram {
             margin-left: 15px;
-            font-size: 32px;
+            font-size: 36px;
         }
     }
 
