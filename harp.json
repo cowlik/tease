@@ -1,9 +1,15 @@
 {
   "globals": {
-    "title": "tease",
-    "url": "teaseballard.com",
+    "title": "Tease",
+    "url": "http://rdsoda.com",
     "description": "It's a hair salon! In Ballard!",
     "keywords": "Seattle, Ballard, hair, Nicka, Melissa",
-    "email": "clint@cowlik.com"
+    "email": "clint@cowlik.com",
+    "facebook": {
+      "app_id": {
+        "prod": "1900714163493810",
+        "stage": "1900731456825414"
+      }
+    }
   }
 }

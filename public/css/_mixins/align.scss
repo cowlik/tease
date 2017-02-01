@@ -1,0 +1,14 @@
+// align
+// --------------------------------------------------
+
+@mixin align-center() {
+    top: 50vh;
+    left: 50vw;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,-50%,0);
+
+    @media (min-width: $screen-max) {
+        left: $screen-max / 2;
+    }
+}
