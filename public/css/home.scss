@@ -18,8 +18,23 @@
     overflow: hidden;
     position: relative;
 
-    @media (min-width: $screen-med) {
-        padding-bottom: $spacing-max + $spacing-min;
+    @media (min-width: $screen-max) {
+        &:before,
+        &:after {
+            width: 475px;
+            content: url("#{$path-imgs}ornament.svg");
+            opacity: 0.04;
+            top: 18%;
+            right: 82%;
+            position: absolute;
+            transform: rotate(180deg);
+            z-index: -1;
+        }
+
+        &:after {
+            left: 82%;
+            right: 0;
+        }
     }
 }
 
@@ -59,19 +74,9 @@
     width: 100%;
     max-width: 800px;
     height: auto;
-    padding: 0 12px 30%;
+    padding: 0 12px;
     position: relative;
 
-    &:before {
-        @include align-horizontal();
-        width: 25%;
-        content: '';
-        background: url("#{$path-imgs}ornament.svg") no-repeat bottom center;
-        top: 0;
-        bottom: 0;
-        z-index: -1;
-    }
-    
     a {
         width: auto;
         padding: 3% 6% 2.5%;
@@ -107,12 +112,6 @@
     }
 
     @media (min-width: 800px) {
-        padding-bottom: 240px;
-
-        &:before {
-            left: 50%;
-        }
-
         a {
             width: 294px;
             height: 90px;
@@ -124,20 +123,20 @@
 }
 
 .intro-rule {
-    padding: 0 8px $spacing-max;
+    padding: 5% 8px 10%;
     
     .rule {
         @include rule($color-orange);
     }
 
     @media (min-width: $screen-med) {
-        padding: $spacing-max 0 ($spacing-max + $spacing-min);
+        padding: $spacing-max 16px ($spacing-max + $spacing-min);
     }
 }
 
 .intro-rule-bottom {
-    padding-top: $spacing-max;
-    padding-bottom: 0;
+    padding-top: 10%;
+    padding-bottom: 7%;
 
     .rule {
         transform: rotate(180deg);
@@ -145,5 +144,6 @@
 
     @media (min-width: $screen-med) {
         padding-top: $spacing-max + $spacing-min;
+        padding-bottom: $spacing-max + $spacing-min;
     }
 }
