@@ -14,9 +14,37 @@ footer {
     a {
         color: #fff;
         transition: color 0.2s ease-in-out;
+        position: relative;
+        display: inline-block;
 
         &:hover {
             color: #ccc;
+        }
+
+        &:before {
+            @include fa-icon();
+            font-size: 20px;
+            top: -1px;
+            left: 0;
+            position: absolute;
+        }
+
+        &[href^="tel"],
+        &[href^="mailto"] {
+            margin-bottom: 7px;
+            padding-left: 25px;
+        }
+
+        &[href^="tel"] {
+            &:before {
+                content: $fa-var-phone-square;
+            }
+        }
+
+        &[href^="mailto"] {
+            &:before {
+                content: $fa-var-envelope-square;
+            }
         }
     }
 
@@ -29,34 +57,35 @@ footer {
         }
     }
 
-    .fa-phone-square,
-    .fa-envelope-square {
-        margin-right: 7px;
-        font-size: 18px;
-    }
-
     .fa-facebook-square,
     .fa-twitter-square,
     .fa-instagram {
         margin-left: 12px;
-        font-size: 30px;
+        font-size: 32px;
     }
 
     @media (min-width: $screen-med) {
         padding: 30px $spacing-max ($spacing-max + $spacing-min);
         font-size: 16px;
 
-        .fa-phone-square,
-        .fa-envelope-square {
-            margin-right: 10px;
-            font-size: 20px;
+        a {
+            &:before {
+                font-size: 24px;
+                top: -2px;
+            }
+
+            &[href^="tel"],
+            &[href^="mailto"] {
+                margin-bottom: 8px;
+                padding-left: 30px;
+            }
         }
 
         .fa-facebook-square,
         .fa-twitter-square,
         .fa-instagram {
             margin-left: 15px;
-            font-size: 36px;
+            font-size: 40px;
         }
     }
 

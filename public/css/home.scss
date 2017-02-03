@@ -1,8 +1,8 @@
 // home
 // --------------------------------------------------
 
-@import '_partials/variables';
-@import '_partials/mixins';
+@import "_partials/variables";
+@import "_partials/mixins";
 
 #layers {
     height: 100%;
@@ -13,10 +13,14 @@
 .layer-front {
     width: 100%;
     height: auto;
-    padding: ($spacing-max * 2) 0;
+    padding: $spacing-max 0;
     text-align: center;
     overflow: hidden;
     position: relative;
+
+    @media (min-width: $screen-med) {
+        padding-bottom: $spacing-max + $spacing-min;
+    }
 }
 
 .layer-back {
@@ -45,7 +49,7 @@
 #logo {
     @include align-center();
     width: 100%;
-    max-width: 700px;
+    max-width: 800px;
     height: auto;
     padding: 0 $spacing-min;
 }
@@ -55,14 +59,13 @@
     width: 100%;
     max-width: 800px;
     height: auto;
-    padding: $spacing-max 12px 30%;
+    padding: 0 12px 30%;
     position: relative;
 
     &:before {
         @include align-horizontal();
         width: 25%;
-        content: "";
-        opacity: 0.2;
+        content: '';
         background: url("#{$path-imgs}ornament.svg") no-repeat bottom center;
         top: 0;
         bottom: 0;
@@ -89,7 +92,7 @@
     svg {
         width: 100%;
         height: auto;
-        fill: $color-gray;
+        fill: $color-gray-dark;
     }
 
     @media (max-width: $screen-min - 1px) {
@@ -117,5 +120,30 @@
             padding: 0;
             font-size: 38px;
         }
+    }
+}
+
+.intro-rule {
+    padding: 0 8px $spacing-max;
+    
+    .rule {
+        @include rule($color-orange);
+    }
+
+    @media (min-width: $screen-med) {
+        padding: $spacing-max 0 ($spacing-max + $spacing-min);
+    }
+}
+
+.intro-rule-bottom {
+    padding-top: $spacing-max;
+    padding-bottom: 0;
+
+    .rule {
+        transform: rotate(180deg);
+    }
+
+    @media (min-width: $screen-med) {
+        padding-top: $spacing-max + $spacing-min;
     }
 }
