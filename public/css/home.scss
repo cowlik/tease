@@ -13,28 +13,32 @@
 .layer-front {
     width: 100%;
     height: auto;
-    padding: $spacing-max 0;
+    padding: 5% 0;
     text-align: center;
-    overflow: hidden;
     position: relative;
 
-    @media (min-width: $screen-max) {
-        &:before,
-        &:after {
-            width: 475px;
-            content: url("#{$path-imgs}ornament.svg");
-            opacity: 0.04;
-            top: 18%;
-            right: 82%;
-            position: absolute;
-            transform: rotate(180deg);
-            z-index: -1;
-        }
+    &:before {
+        @include align-horizontal();
+        width: 23%;
+        max-width: 140px;
+        content: url("#{$path-imgs}ornament.svg");
+        top: 0;
+        transform: rotate(180deg) translate3d(50%,75%,0);
+        z-index: 0;
+    }
 
-        &:after {
-            left: 82%;
-            right: 0;
-        }
+    &:after {
+        @include align-horizontal();
+        width: 23%;
+        max-width: 140px;
+        content: url("#{$path-imgs}ornament.svg");
+        bottom: 0;
+        transform: translate3d(-50%,75%,0);
+        z-index: 1;
+    }
+
+    @media (min-width: $screen-med) {
+        padding: ($spacing-min / 2) 0;
     }
 }
 
@@ -123,10 +127,10 @@
 }
 
 .intro-rule {
-    padding: 5% 8px 10%;
+    padding: 0 8px 10%;
     
     .rule {
-        @include rule($color-orange);
+        @include rule(#ddd);
     }
 
     @media (min-width: $screen-med) {
@@ -136,7 +140,7 @@
 
 .intro-rule-bottom {
     padding-top: 10%;
-    padding-bottom: 7%;
+    padding-bottom: 0;
 
     .rule {
         transform: rotate(180deg);
@@ -144,6 +148,6 @@
 
     @media (min-width: $screen-med) {
         padding-top: $spacing-max + $spacing-min;
-        padding-bottom: $spacing-max + $spacing-min;
+        padding-bottom: $spacing-max;
     }
 }
