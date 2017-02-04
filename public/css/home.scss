@@ -13,7 +13,7 @@
 .layer-front {
     width: 100%;
     height: auto;
-    padding: 5% 0;
+    padding: 10% 0;
     text-align: center;
     position: relative;
 
@@ -38,7 +38,7 @@
     }
 
     @media (min-width: $screen-med) {
-        padding: ($spacing-min / 2) 0;
+        padding: $spacing-min 0;
     }
 }
 
@@ -130,7 +130,7 @@
     padding: 0 8px 10%;
     
     .rule {
-        @include rule(#ddd);
+        @include rule(#eee);
     }
 
     @media (min-width: $screen-med) {
