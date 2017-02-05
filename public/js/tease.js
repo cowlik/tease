@@ -1,4 +1,4 @@
-var tease = tease || {};
+var Tease = Tease || {};
 
 /*
  *
@@ -65,6 +65,15 @@ Tease.Map.prototype = {
                 scrollwheel: false,
                 styles: map.styles,
                 zoom: map.zoom()
+            }),
+            googleMarker = new google.maps.Marker({
+                icon: {
+                    //scaledSize: new google.maps.Size(46,40),
+                    scaledSize: new google.maps.Size(35,30),
+                    url: "../imgs/heart.svg"
+                },
+                map: googleMap,
+                position: map.center
             });
 
         google.maps.event.addListener(googleMap, "resize", function() {

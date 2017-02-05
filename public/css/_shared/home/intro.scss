@@ -31,7 +31,7 @@
         @include font-medium();
         width: 100%;
         height: auto;
-        fill: $color-gray-dark;
+        fill: $color-gray;
     }
 
     @media (max-width: $screen-min - 1px) {
