@@ -2,6 +2,16 @@ section#layers
     div.layer-back
         img(id="logo", src="/imgs/logo.svg", width="232", height="132", alt="tease")
     div.layer-front
+        div.layer-rule
+            != partial("_shared/rule")
         != partial("_shared/home/intro")
+        div.layer-rule.layer-rule-bottom 
+            != partial("_shared/rule")
     div.layer-back
     div.layer-front
+        div.layer-rule
+            != partial("_shared/rule")
+        h1 We are located
+            br 
+            | in the heart of Ballard
+        div#map

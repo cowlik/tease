@@ -10,6 +10,14 @@
         "prod": "1900714163493810",
         "stage": "1900731456825414"
       }
+    },
+    "google": {
+      "maps": {
+        "api": {
+          "version": "3.26",
+          "key": "AIzaSyBhisRobxM2qcAi7TNXZmBnSbZPkPgcFpg"
+        }
+      }
     }
   }
 }

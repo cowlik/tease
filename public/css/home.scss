@@ -4,10 +4,26 @@
 @import "_partials/variables";
 @import "_partials/mixins";
 
+@import "_shared/home/intro";
+
 #layers {
     height: 100%;
     perspective: 1px;
     position: relative;
+
+    h1 {
+        @include font-bold();
+        padding: 0 $spacing-min 10%;
+        color: $color-red;
+        font-size: 6vw;
+    }
+
+    @media (min-width: $screen-med) {
+        h1 {
+            padding: 0 $spacing-max ($spacing-max + $spacing-min);
+            font-size: 45px;
+        }
+    }
 }
 
 .layer-front {
@@ -35,6 +51,15 @@
         bottom: 0;
         transform: translate3d(-50%,75%,0);
         z-index: 1;
+    }
+
+    &:last-child {
+        padding-bottom: 0;
+
+        &:after {
+            content: "";
+            display: none;
+        }
     }
 
     @media (min-width: $screen-med) {
@@ -65,80 +90,19 @@
     }
 }
 
-#logo {
-    @include align-center();
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    padding: 0 $spacing-min;
-}
-
-#intro {
-    @include align-horizontal();
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    padding: 0 12px;
-    position: relative;
-
-    a {
-        width: auto;
-        padding: 3% 6% 2.5%;
-        background-color: rgba(256,256,256,0.5);
-        border: 2px solid $color-orange-dark;
-        color: $color-orange-dark;
-        font-size: 16px;
-        font-size: 4.8vw;
-        display: inline-block;
-        transition: background-color 0.2s ease-in-out;
-
-        &:hover {
-            color: #fff;
-            background-color: $color-orange-dark;
-        }
-    }
-
-    svg {
-        width: 100%;
-        height: auto;
-        fill: $color-gray-dark;
-    }
-
-    @media (max-width: $screen-min - 1px) {
-        a {
-            font-size: 16px;
-        }
-    }
-
-    @media (min-width: $screen-med) {
-        padding-right: 24px;
-        padding-left: 24px;
-    }
-
-    @media (min-width: 800px) {
-        a {
-            width: 294px;
-            height: 90px;
-            line-height: 90px;
-            padding: 0;
-            font-size: 38px;
-        }
-    }
-}
-
-.intro-rule {
-    padding: 0 8px 10%;
+.layer-rule {
+    padding: 0 $spacing-min 10%;
     
     .rule {
         @include rule(#eee);
     }
 
     @media (min-width: $screen-med) {
-        padding: $spacing-max 16px ($spacing-max + $spacing-min);
+        padding: $spacing-max $spacing-max ($spacing-max + $spacing-min);
     }
 }
 
-.intro-rule-bottom {
+.layer-rule-bottom {
     padding-top: 10%;
     padding-bottom: 0;
 
@@ -149,5 +113,22 @@
     @media (min-width: $screen-med) {
         padding-top: $spacing-max + $spacing-min;
         padding-bottom: $spacing-max;
+    }
+}
+
+#logo {
+    @include align-center();
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    padding: 0 $spacing-min;
+}
+
+#map {
+    width: 100%;
+    height: 200px;
+
+    @media (min-width: $screen-med) {
+        height: 400px;
     }
 }

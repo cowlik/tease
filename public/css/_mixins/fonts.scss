@@ -1,0 +1,32 @@
+// fonts
+// --------------------------------------------------
+
+@mixin font-regular() { 
+	font-family: "TypewriterSerial";
+	font-weight: normal;
+	font-style: normal;
+}
+
+@mixin font-italic() { 
+	font-family: "TypewriterSerial-Italic";
+	font-weight: normal;
+	font-style: normal;
+}
+
+@mixin font-medium() { 
+	font-family: "TypewriterSerial-Medium";
+	font-weight: normal;
+	font-style: normal;
+}
+
+@mixin font-bold() { 
+	font-family: "TypewriterSerial-Bold";
+	font-weight: normal;
+	font-style: normal;
+}
+
+@mixin font-xbold() { 
+	font-family: "TypewriterSerial-Xbold";
+	font-weight: normal;
+	font-style: normal;
+}

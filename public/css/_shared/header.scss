@@ -2,6 +2,7 @@
 // --------------------------------------------------
 
 header {
+    @include font-medium();
     height: 50px;
     line-height: 50px;
     padding-right: $spacing-min;
@@ -19,7 +20,7 @@ header {
         transition: color 0.2s ease-in-out;
 
         &:hover {
-            color: $color-gray-dark;
+            color: $color-orange;
         }
 
         &.fa-bars {

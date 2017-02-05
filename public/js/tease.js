@@ -41,6 +41,46 @@ $(function() {
 
 /*
  *
+ * map
+ *
+ */
+
+Tease.Map = function(elem) {
+    var map = this;
+
+        map.elem = elem;
+        map.center = { lat: 47.6677807505495, lng: -122.37450279999996 };
+        map.styles = [ { "elementType": "geometry", "stylers": [ { "color": "#f5f5f5" } ] }, { "elementType": "labels.icon", "stylers": [ { "visibility": "off" } ] }, { "elementType": "labels.text.fill", "stylers": [ { "color": "#616161" } ] }, { "elementType": "labels.text.stroke", "stylers": [ { "color": "#f5f5f5" } ] }, { "featureType": "administrative.land_parcel", "elementType": "labels.text.fill", "stylers": [ { "color": "#bdbdbd" } ] }, { "featureType": "poi", "elementType": "geometry", "stylers": [ { "color": "#eeeeee" } ] }, { "featureType": "poi", "elementType": "labels.text.fill", "stylers": [ { "color": "#757575" } ] }, { "featureType": "poi.park", "elementType": "geometry", "stylers": [ { "color": "#e5e5e5" } ] }, { "featureType": "poi.park", "elementType": "labels.text.fill", "stylers": [ { "color": "#9e9e9e" } ] }, { "featureType": "road", "elementType": "geometry", "stylers": [ { "color": "#ffffff" } ] }, { "featureType": "road.arterial", "elementType": "labels.text.fill", "stylers": [ { "color": "#757575" } ] }, { "featureType": "road.highway", "elementType": "geometry", "stylers": [ { "color": "#dadada" } ] }, { "featureType": "road.highway", "elementType": "labels.text.fill", "stylers": [ { "color": "#616161" } ] }, { "featureType": "road.local", "elementType": "labels.text.fill", "stylers": [ { "color": "#9e9e9e" } ] }, { "featureType": "transit.line", "elementType": "geometry", "stylers": [ { "color": "#e5e5e5" } ] }, { "featureType": "transit.station", "elementType": "geometry", "stylers": [ { "color": "#eeeeee" } ] }, { "featureType": "water", "elementType": "geometry", "stylers": [ { "color": "#c9c9c9" } ] }, { "featureType": "water", "elementType": "labels.text.fill", "stylers": [ { "color": "#9e9e9e" } ] } ];
+        map.zoom = function() { return (Tease.Utils.getViewportBreakpoint() >= Tease.VIEWPORT_MED) ? 15 : 14; };
+
+        map.init();
+};
+
+Tease.Map.prototype = {
+    init: function() {
+        var map = this,
+            googleMap = new google.maps.Map(map.elem, {
+                center: map.center,
+                disableDefaultUI: true,
+                scrollwheel: false,
+                styles: map.styles,
+                zoom: map.zoom()
+            });
+
+        google.maps.event.addListener(googleMap, "resize", function() {
+            googleMap.setCenter(map.center);
+            googleMap.setZoom(map.zoom());
+        });
+
+        $(window).resize(function(event) {
+            google.maps.event.trigger(googleMap, "resize");
+        })
+    }
+};
+
+
+/*
+ *
  * modal
  *
  */
@@ -194,12 +234,12 @@ Tease.Nav.prototype = {
 Tease.Utils = {
     getViewportBreakpoint: function() {
         var windowWidth = window.innerWidth || $(window).width(),
-            breakpoint = tease.VIEWPORT_MIN;
+            breakpoint = Tease.VIEWPORT_MIN;
 
-        if (windowWidth >= tease.VIEWPORT_MED && windowWidth < tease.VIEWPORT_MAX) {
-            breakpoint = tease.VIEWPORT_MED;
-        } else if (windowWidth >= tease.VIEWPORT_MAX) {
-            breakpoint = tease.VIEWPORT_MAX;
+        if (windowWidth >= Tease.VIEWPORT_MED && windowWidth < Tease.VIEWPORT_MAX) {
+            breakpoint = Tease.VIEWPORT_MED;
+        } else if (windowWidth >= Tease.VIEWPORT_MAX) {
+            breakpoint = Tease.VIEWPORT_MAX;
         }
 
         return breakpoint;

@@ -17,13 +17,9 @@ html {
 }
 
 body {
+    @include font-regular();
     height: 100%;
     color: $color-gray;
-    font-family: 'TypewriterSerial', serif;
-    font-weight: normal;
-	font-style: normal;
-    //display: flex;
-    //flex-direction: column;
 }
 
 h1,
@@ -39,6 +35,15 @@ ol,
 ul {
     margin: 0;
     padding: 0;
+}
+
+em {
+    @include font-italic();
+}
+
+b,
+strong {
+    @include font-bold();
 }
 
 p {
