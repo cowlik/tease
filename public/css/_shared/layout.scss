@@ -51,6 +51,7 @@ p {
 }
 
 a {
+    color: $color-orange;
     text-decoration: none;
 }
 
@@ -58,9 +59,10 @@ img {
     vertical-align: middle;
 }
 
-header,
-main,
-footer {
+#header,
+#nav,
+#main,
+#footer {
     width: 100%;
     min-width: $screen-min;
     max-width: $screen-max;
@@ -68,7 +70,7 @@ footer {
     overflow: hidden;
 }
 
-main {
+#main {
     flex: 1 0 auto;
     background-color: #fff;
     box-shadow: 0 0 8px #ddd;

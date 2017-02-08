@@ -30,13 +30,15 @@ Tease = {
             tease.Utils.addCSSClass(document.getElementsByTagName('html')[0], 'touch');
         }
 
-        //tease.nav = new tease.Nav();
+        tease.nav = new Tease.Nav();
     }
 };
 
 $(function() {
     Tease.init();
 });
+
+
 
 
 /*
@@ -53,6 +55,7 @@ Tease.Map = function(elem) {
         map.styles = [ { "elementType": "geometry", "stylers": [ { "color": "#f5f5f5" } ] }, { "elementType": "labels.icon", "stylers": [ { "visibility": "off" } ] }, { "elementType": "labels.text.fill", "stylers": [ { "color": "#616161" } ] }, { "elementType": "labels.text.stroke", "stylers": [ { "color": "#f5f5f5" } ] }, { "featureType": "administrative.land_parcel", "elementType": "labels.text.fill", "stylers": [ { "color": "#bdbdbd" } ] }, { "featureType": "poi", "elementType": "geometry", "stylers": [ { "color": "#eeeeee" } ] }, { "featureType": "poi", "elementType": "labels.text.fill", "stylers": [ { "color": "#757575" } ] }, { "featureType": "poi.park", "elementType": "geometry", "stylers": [ { "color": "#e5e5e5" } ] }, { "featureType": "poi.park", "elementType": "labels.text.fill", "stylers": [ { "color": "#9e9e9e" } ] }, { "featureType": "road", "elementType": "geometry", "stylers": [ { "color": "#ffffff" } ] }, { "featureType": "road.arterial", "elementType": "labels.text.fill", "stylers": [ { "color": "#757575" } ] }, { "featureType": "road.highway", "elementType": "geometry", "stylers": [ { "color": "#dadada" } ] }, { "featureType": "road.highway", "elementType": "labels.text.fill", "stylers": [ { "color": "#616161" } ] }, { "featureType": "road.local", "elementType": "labels.text.fill", "stylers": [ { "color": "#9e9e9e" } ] }, { "featureType": "transit.line", "elementType": "geometry", "stylers": [ { "color": "#e5e5e5" } ] }, { "featureType": "transit.station", "elementType": "geometry", "stylers": [ { "color": "#eeeeee" } ] }, { "featureType": "water", "elementType": "geometry", "stylers": [ { "color": "#c9c9c9" } ] }, { "featureType": "water", "elementType": "labels.text.fill", "stylers": [ { "color": "#9e9e9e" } ] } ];
         map.zoom = function() { return (Tease.Utils.getViewportBreakpoint() >= Tease.VIEWPORT_MED) ? 15 : 14; };
 
+        map.preventStyles();
         map.init();
 };
 
@@ -84,115 +87,23 @@ Tease.Map.prototype = {
         $(window).resize(function(event) {
             google.maps.event.trigger(googleMap, "resize");
         })
-    }
-};
+    },
+    preventStyles: function() {
+        var map = this,
+            head = document.getElementsByTagName("head")[0],
+            insertBefore = head.insertBefore;
 
-
-/*
- *
- * modal
- *
- */
-
-Tease.Modal = function() {
-    var modal = this;
-
-    modal.elem = document.getElementById('modal');
-    modal.openBtns = document.querySelectorAll('.modal-open-btn');
-    modal.closeBtns = document.querySelectorAll('.modal-close-btn');
-    modal.selectedElem = null;
-    modal.selectedClass = '';
-
-    modal.init();
-};
-
-Tease.Modal.prototype = {
-    init: function() {
-        var modal = this;
-
-        // open btns
-        for (var i = 0; i < modal.openBtns.length; i++) {
-            $(modal.openBtns[i]).on('click', function(event) {
-                var id = $(this).data('modal'),
-                    hash = $(this).data('hash');
-
-                event.preventDefault();
-                event.stopPropagation();
-
-                modal.open(id, hash);
-            });
-        }
-
-        // close btns
-        for (var j = 0; j < modal.closeBtns.length; j++) {
-            $(modal.closeBtns[j]).on('click', function(event) {
-                event.preventDefault();
-                event.stopPropagation();
-
-                modal.checkHash();
-            });
-        }
-
-        $(modal.elem).on('click', function(event) {
-            modal.checkHash();
-        });
-
-        window.addEventListener('hashchange', function(event) {
-            var hash = window.location.hash;
-
-            if (hash == '' || hash == '#') {
-                modal.close();
+        head.insertBefore = function (newElement, referenceElement) {
+            if (newElement.href && newElement.href.indexOf("https://fonts.googleapis.com/css?family=Roboto") === 0) {
+                return;
             }
-        });
-    },
-    checkHash: function() {
-        var modal = this,
-            hash = window.location.hash;
 
-        if (hash == '' || hash == '#') {
-            modal.close();
-        } else {
-            window.location.hash = '';
-        }
-    },
-    open: function(id, hash) {
-        var modal = this;
-
-        if (hash) {
-            window.location.hash = hash;
-        }
-
-        modal.selectedElem = document.getElementById(id);
-        modal.selectedClass = (modal.selectedElem.className != '') ? modal.selectedElem.className + '-selected' : id + '-selected';
-
-        tease.Utils.addCSSClass(modal.elem, 'modal-open');
-
-        if (id == 'nav') {
-            tease.Utils.addCSSClass(modal.selectedElem, modal.selectedClass);
-        }
-
-        window.setTimeout(function(event) {
-            window.scrollTo(0, 0);
-
-            tease.Utils.addCSSClass(modal.elem, 'modal-visible');
-
-            if (id != 'nav') {
-                tease.Utils.addCSSClass(modal.selectedElem, modal.selectedClass);
+            if (newElement.tagName.toLowerCase() === "style") {
+                return;
             }
-        }, 300);
-    },
-    close: function() {
-        var modal = this;
 
-        tease.Utils.transitionEndListener(modal.elem, function() {
-            tease.Utils.removeCSSClass(modal.elem, 'modal-visible');
-            tease.Utils.removeCSSClass(modal.selectedElem, modal.selectedClass);
-
-            modal.selectedElem = null;
-            modal.selectedClass = '';
-        });
-
-        tease.Utils.removeCSSClass(modal.elem, 'modal-open');
+            insertBefore.call(head, newElement, referenceElement);
+        };
     }
 };
 
@@ -206,8 +117,10 @@ Tease.Modal.prototype = {
 Tease.Nav = function() {
     var nav = this;
 
-    nav.elem = document.getElementById('nav');
-    nav.itemElems = nav.elem.getElementsByTagName('li');
+    nav.elem = document.getElementById("nav");
+    nav.itemElems = nav.elem.getElementsByTagName("li");
+    nav.btns = [nav.elem, document.querySelector(".nav-btn")];
+    nav.isOpen = false;
 
     nav.init();
 };
@@ -216,20 +129,51 @@ Tease.Nav.prototype = {
     init: function() {
         var nav = this;
 
-        // menu btns
-        for (var i = 0; i < nav.itemElems.length; i++) {
-            var itemBtn = nav.itemElems[i].getElementsByTagName('a');
-
-            $(itemBtn).on('touchstart click', { id: i }, function(event) {
+        for (var i = 0; i < nav.btns.length; i++) {
+            $(nav.btns[i]).on('click', function(event) {
+                event.preventDefault();
                 event.stopPropagation();
-                tease.Utils.addCSSClass(nav.itemElems[event.data.id], 'nav-item-selected');
-            });
 
-            $(itemBtn).on('touchend', { id: i }, function(event) {
-                event.stopPropagation();
-                tease.Utils.removeCSSClass(nav.itemElems[event.data.id], 'nav-item-selected');
+                if (!nav.isOpen) {
+                    nav.open();
+                } else {
+                    nav.close();
+                }
+                
+                nav.isOpen = !nav.isOpen;
             });
         }
+
+        for (var j = 0; j < nav.itemElems.length; j++) {
+            var itemBtn = nav.itemElems[j].getElementsByTagName("a");
+
+            $(itemBtn).on("touchstart click", { id: j }, function(event) {
+                event.stopPropagation();
+                Tease.Utils.addCSSClass(nav.itemElems[event.data.id], "nav-item-selected");
+            });
+
+            $(itemBtn).on("touchend", { id: j }, function(event) {
+                event.stopPropagation();
+                Tease.Utils.removeCSSClass(nav.itemElems[event.data.id], "nav-item-selected");
+            });
+        }
+    },
+    open: function() {
+        var nav = this;
+
+        Tease.Utils.addCSSClass(nav.btns[1], "nav-open");
+        Tease.Utils.addCSSClass(nav.elem, "nav-open");
+        Tease.Utils.addCSSClass(nav.elem, "nav-show");
+    },
+    close: function() {
+        var nav = this;
+
+        Tease.Utils.transitionEndListener(nav.elem, function() {
+            Tease.Utils.removeCSSClass(nav.elem, "nav-open");
+        });
+
+        Tease.Utils.removeCSSClass(nav.btns[1], "nav-open");
+        Tease.Utils.removeCSSClass(nav.elem, "nav-show");
     }
 };
 
@@ -371,7 +315,7 @@ Tease.Utils = {
 			transitionEvent = base.getTransitionEvent();
 
         //listener for onComplete CSS transitions
-        if (tease.Utils.hasTransitionSupport) {
+        if (Tease.Utils.hasTransitionSupport) {
             onTransitionComplete = function(event) {
                 elem.removeEventListener(transitionEvent, onTransitionComplete, false);
                 callback(params);

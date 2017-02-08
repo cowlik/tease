@@ -1,7 +1,7 @@
 // footer
 // --------------------------------------------------
 
-footer {
+#footer {
     @include font-medium();
     padding: $spacing-min $spacing-min ($spacing-min * 2);
     line-height: 130%;
