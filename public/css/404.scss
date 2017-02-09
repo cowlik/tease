@@ -1,0 +1,17 @@
+// 404
+// --------------------------------------------------
+
+@import "_partials/variables";
+@import "_partials/mixins";
+
+#main {
+    padding: ($header-height-min + $spacing-min) $spacing-min $spacing-min;
+
+    h1 {
+        color: $color-red;
+    }
+
+    @media (min-width: $screen-med) {
+        padding: ($header-height-max + $spacing-max) $spacing-max $spacing-max;
+    }
+}

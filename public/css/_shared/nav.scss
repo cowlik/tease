@@ -4,10 +4,10 @@
 #nav {
     @include font-bold();
     height: 100%;
-    padding-top: 50px;
+    padding-top: $header-height-min;
     background-color: $color-gray-dark;
-    font-size: 22px;
-    font-size: 7vw;
+    font-size: 26px;
+    font-size: 8vw;
     opacity: 0;
     transform: translate3d(100%,0,0);
     transition: opacity 0.2s ease-in-out;
@@ -31,35 +31,34 @@
     }
 
     li {
-        background-color: $color-gray-dark;
-        border-bottom: 2px solid $color-gray;
+        background-color: $color-gray;
+        border-bottom: 2px solid $color-gray-dark;
         transition: background-color 0.2s ease-in-out;
 
         a {
             width: 100%;
-            padding: 25px $spacing-min $spacing-min;
+            padding: $spacing-min $spacing-min 15px;
             color: #fff;
             display: block;
         }
 
         &:hover,
         &.nav-item-selected {
-            background-color: $color-gray;
+            background-color: $color-gray-dark;
         }
     }
 
     @media (max-width: ($screen-min - 1px)) {
-        font-size: 22px;
+        font-size: 26px;
     }
 
     @media (min-width: $screen-med) {
-        padding-top: 70px;
-        font-size: 50px;
+        padding-top: $header-height-max;
+        font-size: 60px;
 
         li {
             a {
-                padding-right: $spacing-max;
-                padding-left: $spacing-max;
+                padding: 25px $spacing-max $spacing-min;
             }
         }
     }

@@ -11,17 +11,14 @@
     perspective: 1px;
     position: relative;
 
-    h1 {
-        @include font-bold();
+    h2 {
         padding: 0 $spacing-min 10%;
         color: $color-red;
-        font-size: 6vw;
     }
 
     @media (min-width: $screen-med) {
-        h1 {
+        h2 {
             padding: 0 $spacing-max ($spacing-max + $spacing-min);
-            font-size: 45px;
         }
     }
 }

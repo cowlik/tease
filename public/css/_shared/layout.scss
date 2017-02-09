@@ -20,6 +20,8 @@ body {
     @include font-regular();
     height: 100%;
     color: $color-gray;
+    display: flex;
+    flex-direction: column;
 }
 
 h1,
@@ -28,7 +30,32 @@ h3,
 h4,
 h5,
 h6 {
+    @include font-bold();
     margin: 0;
+}
+
+h1 {
+    font-size: 8vw;
+
+    @media (max-width: $screen-min - 1px) {
+        font-size: 26px;
+    }
+
+    @media (min-width: $screen-med) {
+        font-size: 60px;
+    }
+}
+
+h2 {
+    font-size: 6.5vw;
+
+    @media (max-width: $screen-min - 1px) {
+        font-size: 20px;
+    }
+
+    @media (min-width: $screen-med) {
+        font-size: 48px;
+    }
 }
 
 ol,
@@ -71,9 +98,9 @@ img {
 }
 
 #main {
-    flex: 1 0 auto;
     background-color: #fff;
     box-shadow: 0 0 8px #ddd;
+    flex: 1 0 auto;
     position: relative;
     z-index: 0;
 }

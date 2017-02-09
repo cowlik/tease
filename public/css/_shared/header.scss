@@ -3,8 +3,8 @@
 
 #header {
     @include font-medium();
-    height: 50px;
-    line-height: 50px;
+    height: $header-height-min;
+    line-height: $header-height-min;
     padding-right: $spacing-min;
     padding-left: $spacing-min;
     background-color: $color-orange-dark;
@@ -14,21 +14,17 @@
     z-index: 3;
 
     a {
-        font-size: 16px;
+        font-size: 20px;
         color: #fff;
         float: left;
         transition: color 0.2s ease-in-out;
-
-        &:hover {
-            color: #ddd;
-        }
     }
 
     .nav-btn {
         @include fa-icon();
-        width: 42px;
+        width: 47px;
         height: inherit;
-        line-height: 50px;
+        line-height: $header-height-min;
         padding-left: 20px;
         overflow: hidden;
         float: right;
@@ -49,24 +45,23 @@
             }
 
             &:before {
-                line-height: 49px;
                 content: $fa-var-bars;
-                font-size: 26px;
+                font-size: 32px;
                 transform: translate3d(0,0,0);
             }
 
             &:after {
-                line-height: 46px;
+                line-height: $header-height-min - 2px;
                 content: $fa-var-close;
-                font-size: 30px;
-                transform: translate3d(25px,0,0);
+                font-size: 36px;
+                transform: translate3d(30px,0,0);
             }
         }
 
         &.nav-open {
             span {
                 &:before {
-                    transform: translate3d(-25px,0,0);
+                    transform: translate3d(-30px,0,0);
                 }
 
                 &:after {
@@ -77,36 +72,35 @@
     }
 
     @media (min-width: $screen-med) {
-        height: 70px;
-        line-height: 70px;
+        height: $header-height-max;
+        line-height: $header-height-max;
         padding-right: $spacing-max;
         padding-left: $spacing-max;
 
         a {
-            font-size: 22px;
+            font-size: 24px;
         }
 
         .nav-btn {
-            width: 48px;
-            line-height: 70px;
+            width: 54px;
+            line-height: $header-height-max;
 
             span {
                 &:before {
-                    line-height: 69px;
-                    font-size: 32px;
+                    font-size: 40px;
                 }
 
                 &:after {
-                    line-height: 64px;
-                    font-size: 38px;
-                    transform: translate3d(32px,0,0);
+                    line-height: $header-height-max - 2px;
+                    font-size: 44px;
+                    transform: translate3d(40px,0,0);
                 }
             }
 
             &.nav-open {
                 span {
                     &:before {
-                        transform: translate3d(-32px,0,0);
+                        transform: translate3d(-40px,0,0);
                     }
                 }
             }

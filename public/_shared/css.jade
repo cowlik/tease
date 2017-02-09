@@ -5,8 +5,20 @@ if environment == "production"
 
     if page == "index"
         link(rel="stylesheet", href="/css/home.min.css")
+
+    if page == "about"
+        link(rel="stylesheet", href="/css/about.min.css")
+
+    if page == "404"
+        link(rel="stylesheet", href="/css/404.min.css")
 else
     link(rel="stylesheet", href="/css/tease.css")
 
     if page == "index"
         link(rel="stylesheet", href="/css/home.css")
+    
+    if page == "about"
+        link(rel="stylesheet", href="/css/about.css")
+
+    if page == "404"
+        link(rel="stylesheet", href="/css/404.css")

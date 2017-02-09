@@ -5,7 +5,20 @@ AddType  application/font-woff2  .woff2
 ErrorDocument 404 /404.html
 
 RewriteEngine on
+
+#redirect homepage
+
 RewriteCond %{HTTP_HOST} ^rdsoda\.com$ [NC]
 RewriteRule ^(.*)$ http://www.rdsoda.com/$1 [R=301,L]
 RewriteCond %{THE_REQUEST} ^.*/index.html
 RewriteRule ^(.*)index.html$ http://www.rdsoda.com/$1 [R=301,L]
+
+#redirect .html and trailing slash
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)/$ $1.html
+RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
+RewriteRule (.*)$ /$1/ [R=301,L]
