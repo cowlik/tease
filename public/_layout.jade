@@ -2,12 +2,7 @@ doctype
 html(lang="en")
   head
     title= title
-    meta(charset="utf-8")
-    meta(name="description", content="#{description}")
-    meta(name="keywords", content="#{keywords}")
-    meta(name="viewport", content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
-    != partial("_shared/facebook")
+    != partial("_shared/meta")
     != partial("_shared/css")
   body
     != partial("_shared/header")

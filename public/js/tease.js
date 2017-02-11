@@ -71,8 +71,7 @@ Tease.Map.prototype = {
             }),
             googleMarker = new google.maps.Marker({
                 icon: {
-                    //scaledSize: new google.maps.Size(46,40),
-                    scaledSize: new google.maps.Size(35,30),
+                    scaledSize: (Tease.Utils.getViewportBreakpoint() >= Tease.VIEWPORT_MED) ? new google.maps.Size(46,40) : new google.maps.Size(35,30),
                     url: "../imgs/heart.svg"
                 },
                 map: googleMap,
