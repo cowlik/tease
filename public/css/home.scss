@@ -86,12 +86,11 @@
         height: 100vh;
         background-color: #ddd;
         background-image: url("#{$path-imgs}home/bg.svg");
-        background-repeat: repeat-x;
-        background-size: 100px 500%;
+        background-size: 300%;
 
         &:before {
-            background: linear-gradient($color-orange, #fff, $color-blue);
-            opacity: 0.8;
+            background: linear-gradient($color-orange, rgba(256,256,256,0.75), $color-blue);
+            opacity: 0.75;
         }
 
         .iphone & {
@@ -111,7 +110,8 @@
 
     @media (min-width: $screen-med) {
         &:nth-child(1) {
-            background-size: 130px 500%;
+            background-repeat: repeat-x;
+            background-size: 130px 700%;
         }
 
         &:nth-child(3) {
@@ -156,7 +156,7 @@
     z-index: 1;
 
     .iphone & {
-        top: 47vh;
+        top: 45vh;
     }
 }
 
