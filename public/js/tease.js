@@ -30,6 +30,10 @@ Tease = {
             tease.Utils.addCSSClass(document.getElementsByTagName('html')[0], 'touch');
         }
 
+        if (tease.Utils.isIPhone()) {
+            tease.Utils.addCSSClass(document.getElementsByTagName('html')[0], 'iphone');
+        }
+
         tease.nav = new Tease.Nav();
     }
 };
@@ -71,7 +75,7 @@ Tease.Map.prototype = {
             }),
             googleMarker = new google.maps.Marker({
                 icon: {
-                    scaledSize: (Tease.Utils.getViewportBreakpoint() >= Tease.VIEWPORT_MED) ? new google.maps.Size(46,40) : new google.maps.Size(35,30),
+                    scaledSize: (Tease.Utils.getViewportBreakpoint() >= Tease.VIEWPORT_MED) ? new google.maps.Size(46,40) : new google.maps.Size(30,26),
                     url: "../imgs/heart.svg"
                 },
                 map: googleMap,
@@ -253,6 +257,16 @@ Tease.Utils = {
         }
 
         return isMobile;
+    },
+    isIPhone: function() {
+        var isIPhone = false,
+            userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        if (/iPhone/.test(userAgent) && !window.MSStream) {
+            isIPhone = true;
+        }
+
+        return isIPhone;
     },
     hasCanvasSupport: function() {
         var elem = document.createElement('canvas');

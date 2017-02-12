@@ -86,17 +86,23 @@
         height: 100vh;
         background-color: #ddd;
         background-image: url("#{$path-imgs}home/bg.svg");
-        background-size: 250%;
+        background-repeat: repeat-x;
+        background-size: 100px 500%;
 
         &:before {
             background: linear-gradient($color-orange, #fff, $color-blue);
-            opacity: 0.75;
+            opacity: 0.8;
+        }
+
+        .iphone & {
+            height: 90vh;
         }
     }
 
     &:nth-child(3) {
-        height: 65vh;
+        height: 85vh;
         background-image: url("#{$path-imgs}home/station.jpg");
+        background-position: 35%;
     }
 
     .mobile & {
@@ -105,17 +111,11 @@
 
     @media (min-width: $screen-med) {
         &:nth-child(1) {
-            background-size: 200%;
+            background-size: 130px 500%;
         }
 
         &:nth-child(3) {
-            height: 85vh;
-        }
-    }
-
-    @media (min-width: $screen-max) {
-        &:nth-child(1) {
-            background-size: 150%;
+            background-position: center;
         }
     }
 }
@@ -154,6 +154,10 @@
     padding: 0 $spacing-min;
     position: relative;
     z-index: 1;
+
+    .iphone & {
+        top: 47vh;
+    }
 }
 
 #intro {
