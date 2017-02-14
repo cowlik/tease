@@ -29,7 +29,7 @@
         background-size: 100px 400%;
 
         &:before {
-            background: linear-gradient($color-orange, rgba(256,256,256,0.75), $color-blue);
+            background: linear-gradient($color-orange, rgba(255,255,255,0.75), $color-blue);
             opacity: 0.75;
         }
 

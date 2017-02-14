@@ -98,7 +98,7 @@
         height: 0;
         padding-bottom: 66%;
         background-position: center $header-height-min;
-        background-size: contain;
+        background-size: 100%;
 
         &:before {
             background: linear-gradient(transparent, transparent, $color-blue);
@@ -113,6 +113,12 @@
     @media (min-width: $screen-med) {
         &:nth-child(1) {
             background-position: center $header-height-max;
+        }
+    }
+
+    @media (min-width: $screen-max) {
+        &:nth-child(1) {
+            background-size: 1200px;
         }
     }
 }

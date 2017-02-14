@@ -1,0 +1,9 @@
+// booking
+// --------------------------------------------------
+
+@import "_partials/variables";
+@import "_partials/mixins";
+
+.layer-back {
+    background-image: url("#{$path-imgs}booking/stations.jpg");
+}

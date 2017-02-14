@@ -1,0 +1,15 @@
+section.layers
+    div.layer-back
+    div.layer-front
+        div.layer-rule
+            != partial("_shared/rule")
+        div.layer-front-content
+            h1 Booking
+            script.
+                daysmart_acc = "#{salon_iris.plugin.id}";
+                daysmart_iframe_width = 1200;
+                daysmart_iframe_height = 0;
+                daysmart_website_root = "#{salon_iris.plugin.url}";
+            script(src="#{salon_iris.plugin.url}/Scripts/external/bookingplugin.js")
+        div.layer-rule.layer-rule-bottom 
+            != partial("_shared/rule")

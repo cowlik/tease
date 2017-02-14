@@ -18,6 +18,12 @@
           "key": "AIzaSyBhisRobxM2qcAi7TNXZmBnSbZPkPgcFpg"
         }
       }
+    },
+    "salon_iris": {
+      "plugin": {
+        "id": "464b1623-9e43-4da0-a0d3-ef354e8ce62d",
+        "url": "https://olb.saloniris.com"
+      }
     }
   }
 }

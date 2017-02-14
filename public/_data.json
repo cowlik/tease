@@ -5,6 +5,9 @@
     "about": {
         "title": "Tease - About"
     },
+    "booking": {
+        "title": "Tease - Booking"
+    },
     "404": { 
         "title": "Tease - 404"
     }
