@@ -4,14 +4,11 @@
 @import "_partials/variables";
 @import "_partials/mixins";
 
-#layers {
-    height: 100%;
-    perspective: 1px;
-    position: relative;
+.layers {
+    margin: 0;
 
     h2 {
         padding: 0 $spacing-min 10%;
-        color: $color-red;
     }
 
     @media (min-width: $screen-med) {
@@ -21,72 +18,15 @@
     }
 }
 
-.layer-front {
-    width: 100%;
-    height: auto;
-    padding: 10% 0;
-    text-align: center;
-    position: relative;
-
-    &:before {
-        @include align-horizontal();
-        width: 23%;
-        max-width: 140px;
-        content: url("#{$path-imgs}ornament.svg");
-        top: 0;
-        transform: rotate(180deg) translate3d(50%,75%,0);
-        z-index: 0;
-    }
-
-    &:after {
-        @include align-horizontal();
-        width: 23%;
-        max-width: 140px;
-        content: url("#{$path-imgs}ornament.svg");
-        bottom: 0;
-        transform: translate3d(-50%,75%,0);
-        z-index: 1;
-    }
-
-    &:last-child {
-        padding-bottom: 0;
-
-        &:after {
-            content: "";
-            display: none;
-        }
-    }
-
-    @media (min-width: $screen-med) {
-        padding: $spacing-min 0;
-    }
-}
-
 .layer-back {
-    width: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-
-    &:before {
-        width: 100%;
-        height: 100%;
-        content: "";
-        background: linear-gradient($color-orange, transparent, $color-blue);
-        opacity: 0.5;
-        top: 0;
-        left: 0;
-        position: absolute;
-        z-index: 0;
-    }
-
     &:nth-child(1) {
         height: 100vh;
+        padding-bottom: 0;
         background-color: #ddd;
         background-image: url("#{$path-imgs}home/bg.svg");
-        background-size: 300%;
+        background-position: center;
+        background-repeat: repeat-x;
+        background-size: 100px 400%;
 
         &:before {
             background: linear-gradient($color-orange, rgba(256,256,256,0.75), $color-blue);
@@ -104,13 +44,8 @@
         background-position: 35%;
     }
 
-    .mobile & {
-        background-attachment: scroll;
-    }
-
     @media (min-width: $screen-med) {
         &:nth-child(1) {
-            background-repeat: repeat-x;
             background-size: 130px 700%;
         }
 
@@ -120,29 +55,9 @@
     }
 }
 
-.layer-rule {
-    padding: 0 $spacing-min 10%;
-    
-    .rule {
-        @include rule(#eee);
-    }
-
-    @media (min-width: $screen-med) {
-        padding: $spacing-max $spacing-max ($spacing-max + $spacing-min);
-    }
-}
-
-.layer-rule-bottom {
-    padding-top: 10%;
-    padding-bottom: 0;
-
-    .rule {
-        transform: rotate(180deg);
-    }
-
-    @media (min-width: $screen-med) {
-        padding-top: $spacing-max + $spacing-min;
-        padding-bottom: $spacing-max;
+.layer-front {
+    &:last-child {
+        padding-bottom: 0;
     }
 }
 
@@ -168,22 +83,9 @@
     padding: 0 12px;
     position: relative;
 
-    > a {
-        @include font-bold();
-        width: auto;
+    .button {
         padding: 3% 6% 2.5%;
-        background-color: rgba(256,256,256,0.5);
-        border: 2px solid $color-red;
-        color: $color-red;
-        font-size: 16px;
         font-size: 5vw;
-        display: inline-block;
-        transition: background-color 0.2s ease-in-out;
-
-        &:hover {
-            color: #fff;
-            background-color: $color-red;
-        }
     }
 
     svg {
@@ -193,19 +95,13 @@
         fill: $color-gray;
     }
 
-    @media (max-width: $screen-min - 1px) {
-        a {
-            font-size: 16px;
-        }
-    }
-
     @media (min-width: $screen-med) {
         padding-right: 24px;
         padding-left: 24px;
     }
 
-    @media (min-width: 800px) {
-        a {
+    @media (min-width: $screen-med) {
+        .button {
             width: 294px;
             height: 90px;
             line-height: 90px;

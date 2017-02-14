@@ -20,8 +20,13 @@ body {
     @include font-regular();
     height: 100%;
     color: $color-gray;
+    font-size: 14px;
     display: flex;
     flex-direction: column;
+
+    @media (min-width: $screen-med) {
+        font-size: 18px;
+    }
 }
 
 h1,
@@ -32,6 +37,7 @@ h5,
 h6 {
     @include font-bold();
     margin: 0;
+    color: $color-red;
 }
 
 h1 {
@@ -75,6 +81,7 @@ strong {
 
 p {
     margin: 0;
+    line-height: 130%;
 }
 
 a {
@@ -112,5 +119,31 @@ img {
     @media (min-width: $screen-med) {
         padding-right: $spacing-max;
         padding-left: $spacing-max;
+    }
+}
+
+.button {
+    @include font-bold();
+    width: auto;
+    padding: 12px 15px 10px;
+    background-color: #fff;
+    border: 2px solid $color-red;
+    color: $color-red;
+    font-size: 16px;
+    display: inline-block;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+        color: #fff;
+        background-color: $color-red;
+    }
+
+    @media (max-width: $screen-min - 1px) {
+        font-size: 16px;
+    }
+
+    @media (min-width: $screen-med) {
+        padding: 24px 30px 20px;
+        font-size: 26px;
     }
 }

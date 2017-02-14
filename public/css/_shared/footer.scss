@@ -4,9 +4,7 @@
 #footer {
     @include font-medium();
     padding: $spacing-min $spacing-min ($spacing-min * 2);
-    line-height: 130%;
     color: #fff;
-    font-size: 14px;
     background-color: $color-gray-dark;
     display: table;
     position: relative;
