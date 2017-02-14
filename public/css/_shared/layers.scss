@@ -92,11 +92,6 @@
 
     .mobile & {
         background-attachment: scroll;
-
-        &:nth-child(1) {
-            background-position: center;
-            background-size: cover;
-        }
     }
 
     &:nth-child(1) {
@@ -107,6 +102,11 @@
 
         &:before {
             background: linear-gradient(transparent, transparent, $color-blue);
+        }
+
+        .mobile & {
+            background-position: center;
+            background-size: cover;
         }
     }
 
