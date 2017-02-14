@@ -92,6 +92,11 @@
 
     .mobile & {
         background-attachment: scroll;
+
+        &:nth-child(1) {
+            background-position: center;
+            background-size: cover;
+        }
     }
 
     &:nth-child(1) {

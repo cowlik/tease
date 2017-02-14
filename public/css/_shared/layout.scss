@@ -125,11 +125,11 @@ img {
 .button {
     @include font-bold();
     width: auto;
-    padding: 12px 15px 10px;
+    padding: 12px 20px 10px;
     background-color: #fff;
     border: 2px solid $color-red;
     color: $color-red;
-    font-size: 16px;
+    font-size: 18px;
     display: inline-block;
     transition: background-color 0.2s ease-in-out;
 
@@ -139,11 +139,11 @@ img {
     }
 
     @media (max-width: $screen-min - 1px) {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     @media (min-width: $screen-med) {
-        padding: 24px 30px 20px;
+        padding: 20px 30px 18px;
         font-size: 26px;
     }
 }
