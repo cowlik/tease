@@ -7,11 +7,17 @@ if environment == "production"
 
     if category == "index"
         script(src="/js/home.min.js")
+
+    if category == "booking"
+        script(src="/js/booking.min.js")
 else
     script(src="/js/tease.js")
 
     if category == "index"
         script(src="/js/home.js")
+
+    if category == "booking"
+        script(src="/js/booking.js")
 
 if category == "index"
     script(src="https://maps.googleapis.com/maps/api/js?v=#{google.maps.api.version}&key=#{google.maps.api.key}&callback=initMap", async, defer)
