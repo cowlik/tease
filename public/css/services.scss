@@ -1,0 +1,19 @@
+// services
+// --------------------------------------------------
+
+@import "_partials/variables";
+@import "_partials/mixins";
+
+@import "_shared/accordion";
+
+.layer-front-content {
+    padding: 0;
+
+    @media (min-width: $screen-med) {
+        padding: 0 $spacing-max;
+    }
+}
+
+.layer-back {
+    background-image: url("#{$path-imgs}services/stations.jpg");
+}

@@ -1,0 +1,166 @@
+// accordion
+// --------------------------------------------------
+
+.accordion {
+    text-align: left;
+
+    h3 {
+        @include font-medium();
+        color: $color-orange-dark;
+        font-size: 20px;
+
+        + p {
+            margin-top: 10px;
+        }
+    }
+
+    h4 {
+        @include font-medium();
+        color: $color-orange-dark;
+        font-size: 16px;
+    }
+
+    @media (min-width: $screen-med) {
+        h3 {
+            font-size: 26px;
+        }
+
+        h4 {
+            font-size: 20px;
+        }
+    }
+}
+
+.accordion-item {
+    height: auto;
+    padding: $spacing-min 60px $spacing-min $spacing-min;
+    border-right-width: 0;
+    border-bottom: none;
+    border-left-width: 0;
+    font-size: 24px;
+    position: relative;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+    display: block;
+    clear: both;
+
+    &:after {
+        @include font-medium();
+        height: 20px;
+        line-height: 24px;
+        margin-top: -10px;
+        font-size: 30px;
+        text-align: center;
+        content: "+";
+        top: 50%;
+        right: $spacing-min;
+        position: absolute;
+    }
+
+    &.accordion-item-selected {
+        background-color: $color-red;
+        color: #fff;
+    }
+
+    &.accordion-item-open {
+        background-color: $color-red;
+        color: #fff;
+
+        &:after {
+            height: 8px;
+            line-height: 8px;
+            margin-top: -4px;
+            font-size: 38px;
+            content: "-";
+            right: 24px;
+        }
+    }
+
+    + div {
+        border-top: 2px solid $color-red;
+        display: none;
+
+        > div {
+            width: 100%;
+            border-bottom: 2px solid #eee;
+            display: table;
+
+            &:last-child {
+                border: none;
+
+                > div {
+                    padding-bottom: $spacing-max;
+                }
+            }
+
+            > div {
+                padding: $spacing-min;
+                vertical-align: top;
+                display: table-cell;
+
+                &:first-child {
+                    width: 90%;
+                }
+
+                &:last-child {
+                    width: 10%;
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $screen-med) {
+        padding: 30px 105px 30px $spacing-max; 
+        border-right-width: 2px;
+        border-left-width: 2px;
+        font-size: 34px;
+
+        &:after {
+            height: 30px;
+            line-height: 34px;
+            margin-top: -15px;
+            font-size: 40px;
+            right: $spacing-max;
+        }
+
+        &.accordion-item-open {
+            &:after {
+                line-height: 10px;
+                font-size: 50px;
+                content: "-";
+                right: 46px;
+            }
+        }
+
+        + div {
+            > div {
+                &:last-child {
+                    > div {
+                        padding-bottom: $spacing-max * 2;
+                    }
+                }
+
+                > div {
+                    padding: $spacing-max;
+
+                    &:first-child {
+                        width: 80%;
+                    }
+
+                    &:last-child {
+                        width: 20%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.accordion-item-last {
+    border-bottom: 2px solid $color-red;
+
+    + div {
+        border-top: none;
+    }
+}

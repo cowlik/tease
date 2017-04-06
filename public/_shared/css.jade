@@ -6,25 +6,31 @@ if environment == "production"
     if page == "index"
         link(rel="stylesheet", href="/css/home.min.css")
 
-    if page == "about"
+    else if page == "about"
         link(rel="stylesheet", href="/css/about.min.css")
 
-    if page == "booking"
+    else if page == "booking"
         link(rel="stylesheet", href="/css/booking.min.css")
 
-    if page == "404"
-        link(rel="stylesheet", href="/css/404.min.css")
+    else if page == "contact"
+        link(rel="stylesheet", href="/css/contact.min.css")
+
+    else if page == "services"
+        link(rel="stylesheet", href="/css/services.min.css")
 else
     link(rel="stylesheet", href="/css/tease.css")
 
     if page == "index"
         link(rel="stylesheet", href="/css/home.css")
     
-    if page == "about"
+    else if page == "about"
         link(rel="stylesheet", href="/css/about.css")
 
-    if page == "booking"
+    else if page == "booking"
         link(rel="stylesheet", href="/css/booking.css")
 
-    if page == "404"
-        link(rel="stylesheet", href="/css/404.css")
+    else if page == "contact"
+        link(rel="stylesheet", href="/css/contact.css")
+
+    else if page == "services"
+        link(rel="stylesheet", href="/css/services.css")

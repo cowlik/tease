@@ -42,6 +42,41 @@ $(function() {
 
 
 
+/*
+ *
+ * accordion
+ *
+ */
+
+Tease.Accordion = function() {
+    var accordion = this;
+
+    accordion.elems = document.querySelectorAll(".accordion-item");
+
+    accordion.init();
+};
+
+Tease.Accordion.prototype = {
+    init: function() {
+        var accordion = this;
+
+        for (var i = 0; i < accordion.elems.length; i++) {
+            accordion.enableItem(accordion.elems[i]);
+        }
+    },
+    enableItem: function(elem) {
+        $(elem).on("click", function(event) {
+            var elem = $(this);
+
+            event.preventDefault();
+
+            elem.toggleClass("accordion-item-open");
+            elem.next().slideToggle();
+        });
+    }
+};
+
+
 
 /*
  *

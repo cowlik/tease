@@ -85,8 +85,12 @@ p {
 }
 
 a {
-    color: $color-orange;
+    color: $color-red;
     text-decoration: none;
+
+    &:hover {
+        color: $color-orange-dark;
+    }
 }
 
 img {

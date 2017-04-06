@@ -2,8 +2,8 @@
   "globals": {
     "title": "Tease",
     "url": "http://www.rdsoda.com",
-    "description": "It's a hair salon! In Ballard!",
-    "keywords": "Seattle, Ballard, hair, Nicka, Melissa",
+    "description": "We are a full service hair salon located in the Ballard neighborhood of Seattle. We provide cuts for all ages and genders, full custom color services, texture options, smoothing treatments, make-up, facial waxing and custom styles for personal or group events.",
+    "keywords": "Seattle, Ballard, Washington, Nicka, Melissa, hair, salon, hair salon, color services, texture options, smoothing treatments, make-up, facial waxing, custom styles",
     "email": "clint@cowlik.com",
     "facebook": {
       "app_id": {
@@ -24,6 +24,9 @@
         "id": "464b1623-9e43-4da0-a0d3-ef354e8ce62d",
         "url": "https://olb.saloniris.com"
       }
+    },
+    "vagaro": {
+      "url": "https://www.vagaro.com/tease"
     }
   }
 }

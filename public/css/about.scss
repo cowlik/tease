@@ -6,4 +6,10 @@
 
 .layer-back {
     background-image: url("#{$path-imgs}about/girls.jpg");
+
+    &:nth-child(1) {
+        &:before {
+            background: linear-gradient(rgba(247,148,30,0.2), transparent, $color-blue);
+        }
+    }
 }

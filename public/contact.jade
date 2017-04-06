@@ -1,0 +1,49 @@
+section.layers
+    div.layer-back
+    div.layer-front
+        div.layer-rule
+            != partial("_shared/rule")
+        div.layer-front-content
+            h1 Contact
+            div#info
+                div.layer-rule.layer-rule-bottom
+                    != partial("_shared/rule")
+                div#info-content
+                    p 1417 NW 54th St #105
+                        br 
+                        | Seattle, WA 98107
+                    div
+                        a(href="tel:2064860141") 206.486.0141
+                        br
+                        a(href="mailto:melissa@teaseballard.com") Melissa
+                        br
+                        a(href="mailto:nicka@teaseballard.com") Nicka
+                    br
+                    a(href="https://www.google.com/maps/dir//1417+NW+54th+St,+Seattle,+WA+98107/@47.6676609,-122.3788814,16z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x549015c9c7120cc9:0xe2eb96c744863aa3!2m2!1d-122.374504!2d47.667661?hl=en", target="_blank", class="button") Get Directions
+                div.layer-rule
+                    != partial("_shared/rule")
+            div#hours
+                h2 Hours:
+                ul
+                    li 
+                        span Sunday:
+                        |&nbsp;Closed
+                    li
+                        span Monday:
+                        |&nbsp;Closed
+                    li
+                        span Tuesday:
+                        |&nbsp;11am - 7pm
+                    li
+                        span Wednesday:
+                        |&nbsp;11am - 7pm
+                    li
+                        span Thursday:
+                        |&nbsp;11am - 7pm
+                    li
+                        span Friday:
+                        |&nbsp;11am - 7pm
+                    li
+                        span Saturday:
+                        |&nbsp;11am - 6pm
+        div#map
