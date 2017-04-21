@@ -44,7 +44,7 @@
 .accordion-item {
     height: auto;
     padding: $spacing-min 60px $spacing-min $spacing-min;
-    border-color: $color-orange;
+    border-color: lighten($color-orange, 32%);
     border-top-width: 1px;
     border-right-width: 0;
     border-bottom: none;
@@ -79,11 +79,6 @@
         }
     }
 
-    &.accordion-item-selected {
-        background-color: $color-red;
-        color: #fff;
-    }
-
     &.accordion-item-open {
         background-color: $color-orange;
         color: #fff;
@@ -100,7 +95,7 @@
     }
 
     + div {
-        border-top: 1px solid $color-orange;
+        border-top: 1px solid lighten($color-orange, 32%);
         display: none;
 
         > div {
@@ -194,7 +189,7 @@
 }
 
 .accordion-item-last {
-    border-bottom: 1px solid $color-orange;
+    border-bottom: 1px solid lighten($color-orange, 32%);
 
     + div {
         border-top: none;

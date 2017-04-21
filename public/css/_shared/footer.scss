@@ -53,14 +53,30 @@
 
         &:last-child {
             text-align: right;
+
+            a {
+                display: block;
+            }
         }
     }
 
     .fa-facebook-square,
     .fa-twitter-square,
-    .fa-instagram {
+    .fa-instagram,
+    .fa-yelp {
+        margin-bottom: 12px;
         margin-left: 12px;
         font-size: 32px;
+    }
+
+    @media (min-width: 375px) {
+        > div {
+            &:last-child {
+                a {
+                    display: inline-block;
+                }
+            }
+        }
     }
 
     @media (min-width: $screen-med) {
@@ -82,7 +98,9 @@
 
         .fa-facebook-square,
         .fa-twitter-square,
-        .fa-instagram {
+        .fa-instagram,
+        .fa-yelp {
+            margin-bottom: 15px;
             margin-left: 15px;
             font-size: 44px;
         }

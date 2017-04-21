@@ -18,12 +18,6 @@
     }
 }
 
-.layer-front {
-    @media (max-width: $screen-med - 1px) {
-        padding: 10% 0;
-    }
-}
-
 .layer-back {
     background-image: url("#{$path-imgs}services/stations.jpg");
 }

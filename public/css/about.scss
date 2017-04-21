@@ -1,6 +1,8 @@
 // about
 // --------------------------------------------------
 
+@import "_font-awesome-4.7.0/font-awesome";
+
 @import "_partials/variables";
 @import "_partials/mixins";
 
@@ -55,6 +57,16 @@
         margin-bottom: 15px;
     }
 
+    a[href^="mailto"] {
+        display: inline-block;
+
+        &:before {
+            @include fa-icon();
+            content: $fa-var-envelope-square;
+            font-size: 32px;
+        }
+    }
+
     @media (min-width: $screen-med) {
         margin-bottom: 0;
         padding-bottom: 0;
@@ -80,6 +92,12 @@
 
             &:last-child {
                 padding-bottom: $spacing-max;
+            }
+        }
+
+        a[href^="mailto"] {
+            &:before {
+                font-size: 40px;
             }
         }
 

@@ -65,7 +65,7 @@ Tease.Accordion.prototype = {
         }
     },
     enableItem: function(elem) {
-        $(elem).on("click", function(event) {
+        $(elem).on("touchstart click", function(event) {
             var elem = $(this);
 
             event.preventDefault();
