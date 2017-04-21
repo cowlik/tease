@@ -38,7 +38,7 @@
 .layer-front {
     width: 100%;
     height: auto;
-    padding: 10% 0;
+    padding: 7% 0;
     text-align: center;
     position: relative;
 
@@ -74,8 +74,6 @@
              width: 74px;
              left: 50%;
         }
-       
-
     }
 
     @media (min-width: $screen-med) {
@@ -119,6 +117,15 @@
         }
     }
 
+    @media (max-width: $screen-min - 1px) {
+        overflow: hidden;
+
+        &:nth-child(1) {
+            background-position: left top;
+            background-attachment: scroll;
+        }
+    }
+
     @media (min-width: $screen-med) {
         &:nth-child(1) {
             background-position: center $header-height-max;
@@ -137,25 +144,30 @@
     margin: 0 auto;
     padding: 0 $spacing-min;
 
+    .layer-rule {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
     @media (min-width: $screen-med) {
         padding: 0 $spacing-max;
     }
 }
 
 .layer-rule {
-    padding: 0 $spacing-min 10%;
+    padding: 0 $spacing-min 7%;
     
     .rule {
         @include rule(#eee);
     }
 
     @media (min-width: $screen-med) {
-        padding: $spacing-max $spacing-max ($spacing-max + $spacing-min);
+        padding: $spacing-max;
     }
 }
 
 .layer-rule-bottom {
-    padding-top: 10%;
+    padding-top: 7%;
     padding-bottom: 0;
 
     .rule {
@@ -163,7 +175,7 @@
     }
 
     @media (min-width: $screen-med) {
-        padding-top: $spacing-max + $spacing-min;
+        padding-top: $spacing-max;
         padding-bottom: $spacing-max;
     }
 }

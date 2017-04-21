@@ -20,10 +20,12 @@ section.layers
                         a(href="mailto:nicka@teaseballard.com") Nicka
                     br
                     a(href="https://www.google.com/maps/dir//1417+NW+54th+St,+Seattle,+WA+98107/@47.6676609,-122.3788814,16z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x549015c9c7120cc9:0xe2eb96c744863aa3!2m2!1d-122.374504!2d47.667661?hl=en", target="_blank", class="button") Get Directions
+            div#hours
                 div.layer-rule
                     != partial("_shared/rule")
-            div#hours
                 h2 Hours:
+                div.layer-rule.layer-rule-bottom
+                    != partial("_shared/rule")
                 ul
                     li 
                         span Sunday:

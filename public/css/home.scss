@@ -69,6 +69,32 @@
     &:last-child {
         padding-bottom: 0;
     }
+
+    @media (max-width: $screen-med - 1px) {
+        padding: 10% 0;
+    }
+}
+
+.layer-rule {
+    @media (max-width: $screen-med - 1px) {
+        padding: 0 $spacing-min 10%;
+    }
+
+    @media (min-width: $screen-med) {
+        padding: $spacing-max $spacing-max ($spacing-max + $spacing-min);
+    }
+}
+
+.layer-rule-bottom {
+    @media (max-width: $screen-med - 1px) {
+        padding-top: 10%;
+        padding-bottom: 0;
+    }
+
+    @media (min-width: $screen-med) {
+        padding-top: $spacing-max + $spacing-min;
+        padding-bottom: $spacing-max;
+    }
 }
 
 #logo {

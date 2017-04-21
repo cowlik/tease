@@ -36,7 +36,7 @@
         &:before {
             @include fa-icon();
             font-size: 24px;
-            top: -2px;
+            top: -4px;
             left: 0;
             position: absolute;
         }
@@ -65,9 +65,11 @@
 
         a {
             padding-left: 40px;
+            font-size: 26px;
 
             &:before {
                 font-size: 34px;
+                top: -6px;
             }
 
             &[href^="tel"],
@@ -80,7 +82,7 @@
 }
 
 #info-content {
-    margin: $spacing-max 0;
+    margin: $spacing-min 0;
 
     > div {
         margin-bottom: $spacing-min;
@@ -89,7 +91,8 @@
     }
 
     @media (min-width: $screen-med) {
-        margin: $spacing-min 0;
+        margin: 0;
+        padding-bottom: 60px;
     }
 }
 
@@ -116,12 +119,16 @@
         padding-bottom: 60px;
 
         ul {
-            margin-top: $spacing-min;
             font-size: 28px;
         }
 
         li {
             margin-bottom: 10px;
+        }
+
+        .layer-rule {
+            padding-top: 30px;
+            padding-bottom: 30px;
         }
     }
 }

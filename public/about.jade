@@ -5,9 +5,38 @@ section.layers
             != partial("_shared/rule")
         div.layer-front-content
             h1 About
-            p Tease got its' wings in a small shop on 15th NW in Ballard. A couple of years and hands later, we're re-located to our new, beautiful studio salon in the Studio Works Ballard building. The building hosts a bunch of local yokels, eclectic creators &amp; new artists. We love our entrepreneurial neighbors and the community and inspiration that it creates.
-            p Here at Tease we aim to excel to not just give you a good style, but a style that makes you YOU, that makes you feel like you're in your own skin, complete. Like, we GET you. With 27 years of combined experience, you know we really love what we do and we're damn good at it.
-            p Listening is a skill. Some people have it, some people don't. At Tease this is the most important part of your time with us; the consultation. This is where we get to know you, hear your awesome ideas and figure out how to best get you there. Consultations come free. Stop in, call or book one anytime.
-            a(href="#{vagaro.url}", target="_blank", class="button") Book Here
+            div#intro
+                div.layer-rule.layer-rule-bottom
+                    != partial("_shared/rule")
+                div#intro-content
+                    p Tease got its' wings in a small shop on 15th NW in Ballard. A couple of years and hands later, we're re-located to our new, beautiful studio salon in the Studio Works Ballard building. The building hosts a bunch of local yokels, eclectic creators &amp; new artists. We love our entrepreneurial neighbors and the community and inspiration that it creates.
+                    p Here at Tease we aim to excel to not just give you a good style, but a style that makes you YOU, that makes you feel like you're in your own skin, complete. Like, we GET you. With 27 years of combined experience, you know we really love what we do and we're damn good at it.
+                    p Listening is a skill. Some people have it, some people don't. At Tease this is the most important part of your time with us; the consultation. This is where we get to know you, hear your awesome ideas and figure out how to best get you there. Consultations come free. Stop in, call or book one anytime.
+                    a(href="#{vagaro.url}", target="_blank", class="button") Book Here
+            div#team
+                div.layer-rule
+                    != partial("_shared/rule")
+                h2 Meet Us
+                div.layer-rule.layer-rule-bottom
+                    != partial("_shared/rule")
+                ul
+                    li
+                        div.team-headshot
+                            img(src="/imgs/about/melissa.jpg", width="500", height="500", alt="Melissa")
+                        h3 Melissa Harrison
+                        p Hello, I'm Nicka! I've been in the industry for over 10 years, specializing in ALL things beauty. I began my career in Eastern Washington at an upscale men's barber shop, learning the techniques to properly tailor men's hair.
+                        p After 2 years of growing a loyal client base, I moved on to work independently at Studio One Salon in Kennewick. Here is where I really honed my craft and my love for hair flourished. After 4 amazing years there, I relocated to Seattle to be with my eventual husband.
+                        p For the past 3 years of living in Seattle, I've extended my skill-set into makeup artistry and specialized eyebrow waxing. Recently, I managed the Anastasia Beverly Hills brow studio at Nordstrom, Bellevue.
+                        p I'm always staying up-to-date on current trends and techniques as continued education is very important to me. My favorite part about doing hair is balayage, the art of hair painting. I love to create depth and dimension in every color I create.
+                        p Cutting hair was my first love and I take pride in customizing every head of hair I get my hands on. I couldn't be more excited to get everyone lookin' good!
+                    li
+                        div.team-headshot
+                            img(src="/imgs/about/nicka.jpg", width="500", height="500", alt="Nicka")
+                        h3 Nicka Harrison
+                        p Hello, I'm Nicka! I've been in the industry for over 10 years, specializing in ALL things beauty. I began my career in Eastern Washington at an upscale men's barber shop, learning the techniques to properly tailor men's hair.
+                        p After 2 years of growing a loyal client base, I moved on to work independently at Studio One Salon in Kennewick. Here is where I really honed my craft and my love for hair flourished. After 4 amazing years there, I relocated to Seattle to be with my eventual husband.
+                        p For the past 3 years of living in Seattle, I've extended my skill-set into makeup artistry and specialized eyebrow waxing. Recently, I managed the Anastasia Beverly Hills brow studio at Nordstrom, Bellevue.
+                        p I'm always staying up-to-date on current trends and techniques as continued education is very important to me. My favorite part about doing hair is balayage, the art of hair painting. I love to create depth and dimension in every color I create.
+                        p Cutting hair was my first love and I take pride in customizing every head of hair I get my hands on. I couldn't be more excited to get everyone lookin' good!
         div.layer-rule.layer-rule-bottom 
             != partial("_shared/rule")

@@ -1,12 +1,14 @@
 section.layers
     div.layer-front
-        div.layer-rule
-            != partial("_shared/rule")
         div.layer-front-content
+            div.layer-rule
+                != partial("_shared/rule")
             h1 404
-            p It looks like you've wondered off the edge of the Internet.
-                br
-                a(href="/") Let's get you home!
+            p It looks like you've wondered off the
+                br 
+                | edge of our site. 
+                a(href="/") Let's get you back home!
+            div.layer-rule.layer-rule-bottom 
+                != partial("_shared/rule")
                 
-        div.layer-rule.layer-rule-bottom 
-            != partial("_shared/rule")
+        

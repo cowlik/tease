@@ -8,6 +8,12 @@
     "booking": {
         "title": "Tease - Booking"
     },
+    "contact": {
+        "title": "Tease - Contact"
+    },
+    "services": {
+        "title": "Tease - Services"
+    },
     "404": { 
         "title": "Tease - 404"
     }

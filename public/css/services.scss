@@ -9,8 +9,18 @@
 .layer-front-content {
     padding: 0;
 
+    @media (min-width: 500px) {
+        padding: 0 $spacing-min;
+    }
+
     @media (min-width: $screen-med) {
-        padding: 0 $spacing-max;
+        padding: $spacing-max;
+    }
+}
+
+.layer-front {
+    @media (max-width: $screen-med - 1px) {
+        padding: 10% 0;
     }
 }
 

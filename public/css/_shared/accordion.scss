@@ -7,7 +7,7 @@
     h3 {
         @include font-medium();
         color: $color-orange-dark;
-        font-size: 20px;
+        font-size: 18px;
 
         + p {
             margin-top: 10px;
@@ -17,7 +17,17 @@
     h4 {
         @include font-medium();
         color: $color-orange-dark;
-        font-size: 16px;
+        font-size: 15px;
+    }
+
+    @media (min-width: 500px) {
+        h3 {
+            font-size: 20px;
+        }
+
+        h4 {
+            font-size: 17px;
+        }
     }
 
     @media (min-width: $screen-med) {
@@ -34,10 +44,13 @@
 .accordion-item {
     height: auto;
     padding: $spacing-min 60px $spacing-min $spacing-min;
+    border-color: $color-orange;
+    border-top-width: 1px;
     border-right-width: 0;
     border-bottom: none;
     border-left-width: 0;
-    font-size: 24px;
+    color: $color-gray;
+    font-size: 19px;
     position: relative;
     transition: background-color 0.2s ease-in-out;
     cursor: pointer;
@@ -45,16 +58,25 @@
     clear: both;
 
     &:after {
-        @include font-medium();
+        @include font-regular();
         height: 20px;
         line-height: 24px;
         margin-top: -10px;
-        font-size: 30px;
+        color: $color-orange;
+        font-size: 26px;
         text-align: center;
         content: "+";
         top: 50%;
         right: $spacing-min;
         position: absolute;
+    }
+
+    &:hover {
+        background-color: $color-orange;
+
+        &:after {
+            color: #fff;
+        }
     }
 
     &.accordion-item-selected {
@@ -63,26 +85,27 @@
     }
 
     &.accordion-item-open {
-        background-color: $color-red;
+        background-color: $color-orange;
         color: #fff;
 
         &:after {
             height: 8px;
             line-height: 8px;
             margin-top: -4px;
-            font-size: 38px;
+            color: #fff;
+            font-size: 34px;
             content: "-";
             right: 24px;
         }
     }
 
     + div {
-        border-top: 2px solid $color-red;
+        border-top: 1px solid $color-orange;
         display: none;
 
         > div {
             width: 100%;
-            border-bottom: 2px solid #eee;
+            border-bottom: 1px solid #eee;
             display: table;
 
             &:last-child {
@@ -110,10 +133,23 @@
         }
     }
 
+
+    @media (min-width: 500px) {
+        font-size: 22px;
+
+        &:after {
+            font-size: 28px;
+        }
+
+        &.accordion-item-open {
+            &:after {
+                font-size: 38px;
+            }
+        }
+    }
+
     @media (min-width: $screen-med) {
-        padding: 30px 105px 30px $spacing-max; 
-        border-right-width: 2px;
-        border-left-width: 2px;
+        padding: 30px 105px 30px $spacing-max;
         font-size: 34px;
 
         &:after {
@@ -158,7 +194,7 @@
 }
 
 .accordion-item-last {
-    border-bottom: 2px solid $color-red;
+    border-bottom: 1px solid $color-orange;
 
     + div {
         border-top: none;
