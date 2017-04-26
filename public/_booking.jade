@@ -5,11 +5,13 @@ section.layers
             != partial("_shared/rule")
         div.layer-front-content
             h1 Booking
-            script.
+            //script.
                 daysmart_acc = "#{salon_iris.plugin.id}";
                 daysmart_iframe_width = 1200;
                 daysmart_iframe_height = 0;
                 daysmart_website_root = "#{salon_iris.plugin.url}";
-            script(src="#{salon_iris.plugin.url}/Scripts/external/bookingplugin.js") 
+            //script(src="#{salon_iris.plugin.url}/Scripts/external/bookingplugin.js") 
+            div(class="vagaro")
+                script(src="https://www.vagaro.com/resources/WidgetEmbeddedLoader/OZqnEJKsDIPqFJ1y6BuPW?v=iLdGpQ5JDaif8gDW4ZYs2r72TgeCIfq1qlS1GZAuAfO#")
         div.layer-rule.layer-rule-bottom 
             != partial("_shared/rule")
