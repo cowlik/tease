@@ -69,6 +69,10 @@
         font-size: 32px;
     }
 
+    .fa-instagram {
+        margin-left: 14px;
+    }
+
     @media (min-width: 375px) {
         > div {
             &:last-child {
@@ -103,6 +107,10 @@
             margin-bottom: 15px;
             margin-left: 15px;
             font-size: 44px;
+        }
+
+        .fa-instagram {
+            margin-left: 17px;
         }
     }
 

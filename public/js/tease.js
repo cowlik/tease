@@ -11,21 +11,15 @@ Tease = {
     SPACING_MIN: 20,
     SPACING_MAX: 40,
     currPage: '',
-    isMobileDevice: false,
-    isTouchDevice: false,
+    isMobile: false,
     init: function() {
         var tease = this;
 
         tease.currPage = Tease.Utils.getPageName().toLowerCase();
 
-        if (tease.Utils.isMobileDevice()) {
-            tease.isMobileDevice = true;
+        if (tease.Utils.isMobile()) {
+            Tease.isMobile = true;
             tease.Utils.addCSSClass(document.getElementsByTagName('html')[0], 'mobile');
-        }
-
-        if (tease.Utils.isTouchDevice()) {
-            tease.isTouchDevice = true;
-            tease.Utils.addCSSClass(document.getElementsByTagName('html')[0], 'touch');
         }
 
         if (tease.Utils.isIPhone()) {
@@ -65,7 +59,7 @@ Tease.Accordion.prototype = {
         }
     },
     enableItem: function(elem) {
-        $(elem).on("touchstart click", function(event) {
+        $(elem).on("click", function(event) {
             var elem = $(this);
 
             event.preventDefault();
@@ -102,6 +96,7 @@ Tease.Map.prototype = {
             googleMap = new google.maps.Map(map.elem, {
                 center: map.center,
                 disableDefaultUI: true,
+                draggable: !Tease.Utils.isMobile(),
                 scrollwheel: false,
                 styles: map.styles,
                 zoom: map.zoom()
@@ -274,10 +269,10 @@ Tease.Utils = {
         var style = window.getComputedStyle(elem);
         return style.getPropertyValue(prop);
     },
-    isTouchDevice: function() {
+    isTouch: function() {
         return (('ontouchstart' in window) || (navigator.MaxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
     },
-    isMobileDevice: function() {
+    isMobile: function() {
         var isMobile = false,
             userAgent = navigator.userAgent || navigator.vendor || window.opera;
 

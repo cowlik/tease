@@ -3,10 +3,10 @@ nav#nav
         li
             a(href="/") Home
         li 
-            a(href="/about/") About
+            a(href="/about") About
         li
-            a(href="/services/") Services
+            a(href="/services") Services
         li
-            a(href="#{vagaro.url}", target="_blank") Booking
+            a(href="#{vagaro.url}", target="_blank", onclick="ga('send', 'event', 'Booking - Nav', 'Click', '#{vagaro.url}');") Booking
         li
-            a(href="/contact/") Contact
+            a(href="/contact") Contact
