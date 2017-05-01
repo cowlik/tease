@@ -1,7 +1,10 @@
 // accordion
 // --------------------------------------------------
 
+$border-color-orange-light: lighten($color-orange, 32%);
+
 .accordion {
+    border-bottom: 2px solid $border-color-orange-light;
     text-align: left;
 
     h3 {
@@ -10,6 +13,7 @@
         font-size: 18px;
 
         + p {
+            @include font-italic();
             margin-top: 10px;
         }
     }
@@ -42,10 +46,11 @@
 }
 
 .accordion-item {
+    @include font-medium();
     height: auto;
     padding: $spacing-min 60px $spacing-min $spacing-min;
-    border-color: lighten($color-orange, 32%);
-    border-top-width: 1px;
+    border-color: $border-color-orange-light;
+    border-top-width: 2px;
     border-right-width: 0;
     border-bottom: none;
     border-left-width: 0;
@@ -58,7 +63,6 @@
     clear: both;
 
     &:after {
-        @include font-regular();
         height: 20px;
         line-height: 24px;
         margin-top: -10px;
@@ -73,14 +77,20 @@
 
     &:hover {
         background-color: $color-orange;
+        border-color: #fff;
 
         &:after {
             color: #fff;
+        }
+
+        + div {
+            border-color: #fff;
         }
     }
 
     &.accordion-item-open {
         background-color: $color-orange;
+        border-color: #fff;
         color: #fff;
 
         &:after {
@@ -92,20 +102,36 @@
             content: "-";
             right: 24px;
         }
+
+        + div {
+            border-color: #fff;
+        }
     }
 
     .mobile & {
         &:hover {
             background-color: #fff;
+            border-color: $border-color-orange-light;
             color: $color-gray;
 
             &:after {
                 color: $color-orange;
             }
+
+            + div {
+                + .accordion-item {
+                    border-color: $border-color-orange-light;
+                }
+
+                + .accordion-item-open {
+                    border-color: #fff;
+                }
+            }
         }
 
         &.accordion-item-open {
             background-color: $color-orange;
+            border-color: #fff;
             color: #fff;
 
             &:after {
@@ -115,12 +141,12 @@
     }
 
     + div {
-        border-top: 1px solid lighten($color-orange, 32%);
+        border-top: 2px solid $border-color-orange-light;
         display: none;
 
         > div {
             width: 100%;
-            border-bottom: 1px solid #eee;
+            border-bottom: 2px solid #eee;
             display: table;
 
             &:last-child {
@@ -205,13 +231,5 @@
                 }
             }
         }
-    }
-}
-
-.accordion-item-last {
-    border-bottom: 1px solid lighten($color-orange, 32%);
-
-    + div {
-        border-top: none;
     }
 }
