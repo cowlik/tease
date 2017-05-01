@@ -1,4 +1,6 @@
-#Tease
+# Tease
+
+## Development Setup
 
 ### 1. Install Global Dependencies:
 
@@ -12,7 +14,7 @@
 
 ### 2. Install Project Dependencies:
 >     cd "C:\Users\..."
-    npm install --only=dev
+    npm install
 
 ### 3. Run Harp Server:
 >     harp server
