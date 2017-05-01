@@ -21,3 +21,9 @@
 .layer-back {
     background-image: url("#{$path-imgs}services/stations.jpg");
 }
+
+.layer-front {
+    @media (max-width: 499px) {
+        padding-bottom: 0;
+    }
+}
