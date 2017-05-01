@@ -4,6 +4,7 @@
 $border-color-orange-light: lighten($color-orange, 32%);
 
 .accordion {
+    border-bottom: 2px solid #fff;
     text-align: left;
 
     h3 {
@@ -24,7 +25,7 @@ $border-color-orange-light: lighten($color-orange, 32%);
     }
 
     @media (min-width: 500px) {
-        border-bottom: 2px solid $border-color-orange-light;
+        border-bottom-color: $border-color-orange-light;
 
         h3 {
             font-size: 20px;
