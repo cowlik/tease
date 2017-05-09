@@ -66,4 +66,16 @@
             }
         }
     }
+
+    @media (max-height: 500px) and (orientation: landscape) {
+        font-size: 17px;
+        font-size: 5.2vh;
+
+        li {
+            a {
+                padding-top: 18px;
+                padding-bottom: 13px;
+            }
+        }
+    }
 }

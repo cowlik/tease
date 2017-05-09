@@ -84,7 +84,7 @@
     @media (max-height: 500px) and (orientation: landscape) {
         &:before,
         &:after {
-             max-width: 80px;
+             max-width: 70px;
         }
     }
 }
@@ -131,6 +131,12 @@
     @media (min-width: $screen-max) {
         &:nth-child(1) {
             background-size: 1200px;
+        }
+    }
+
+    @media (max-height: 500px) and (orientation: landscape) {
+        &:nth-child(1) {
+            padding-bottom: 46%;
         }
     }
 }

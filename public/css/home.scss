@@ -71,6 +71,18 @@
             height: 800px;
         }
     }
+
+    @media (max-height: 500px) and (orientation: landscape) {
+        &:nth-child(1) {
+            .iphone & {
+                height: 100vh;
+            }
+        }
+
+        &:nth-child(3) {
+            height: 100vh;
+        }
+    }
 }
 
 .layer-front {
@@ -138,10 +150,10 @@
     }
 
     @media (max-height: 500px) and (orientation: landscape) {
-        max-width: 350px;
+        max-width: 366px;
 
         .iphone & {
-            top: 48vh;
+            top: 55vh;
         }
     }
 }
