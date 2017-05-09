@@ -80,6 +80,13 @@
     @media (min-width: $screen-med) {
         padding: $spacing-min 0;
     }
+
+    @media (max-height: 500px) and (orientation: landscape) {
+        &:before,
+        &:after {
+             max-width: 80px;
+        }
+    }
 }
 
 .layer-back {
