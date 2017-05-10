@@ -21,7 +21,7 @@ section.layers
                         br
                         a(href="mailto:#{email.nicka}", onclick="ga('send', 'event', 'Email - Contact - Nicka', 'Click', '#{email.nicka}');") Nicka
                     br
-                    a(href="#{google.maps.directions.url}", target="_blank", class="button", onclick="ga('send', 'event', 'Directions - Contact', 'Click', '#{google.maps.directions.url}');") Get Directions
+                    a(href="/find", target="_blank", class="button", onclick="ga('send', 'event', 'Directions - Contact', 'Click', '#{google.maps.directions.url}');") Get Directions
             div#hours
                 div.layer-rule
                     != partial("_shared/rule")

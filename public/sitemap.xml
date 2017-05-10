@@ -7,9 +7,15 @@
     <loc>http://www.teaseballard.com/about</loc> 
   </url>
   <url>
-    <loc>http://www.teaseballard.com/services</loc> 
+    <loc>http://www.teaseballard.com/book</loc> 
   </url>
   <url>
     <loc>http://www.teaseballard.com/contact</loc> 
+  </url>
+  <url>
+    <loc>http://www.teaseballard.com/find</loc> 
+  </url>
+  <url>
+    <loc>http://www.teaseballard.com/services</loc> 
   </url>
 </urlset>
