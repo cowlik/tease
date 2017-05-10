@@ -81,7 +81,7 @@
         padding: $spacing-min 0;
     }
 
-    @media (max-height: 500px) and (orientation: landscape) {
+    @media (max-height: $screen-max-landscape-height) and (orientation: landscape) {
         &:before,
         &:after {
              max-width: 70px;
@@ -134,9 +134,9 @@
         }
     }
 
-    @media (max-height: 500px) and (orientation: landscape) {
+    @media (max-height: $screen-max-landscape-height) and (orientation: landscape) {
         &:nth-child(1) {
-            padding-bottom: 46%;
+            padding-bottom: 56%;
         }
     }
 }

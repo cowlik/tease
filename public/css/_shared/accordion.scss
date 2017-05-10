@@ -10,7 +10,7 @@ $border-color-orange-light: lighten($color-orange, 32%);
     h3 {
         @include font-medium();
         color: $color-orange-dark;
-        font-size: 18px;
+        font-size: 17px;
 
         + p {
             @include font-italic();
@@ -43,6 +43,18 @@ $border-color-orange-light: lighten($color-orange, 32%);
 
         h4 {
             font-size: 20px;
+        }
+    }
+
+    @media (max-height: $screen-max-landscape-height) and (orientation: landscape) {
+        border-bottom-color: #fff;
+
+        h3 {
+            font-size: 17px;
+        }
+
+        h4 {
+            font-size: 15px;
         }
     }
 }
@@ -233,5 +245,9 @@ $border-color-orange-light: lighten($color-orange, 32%);
                 }
             }
         }
+    }
+
+    @media (max-height: $screen-max-landscape-height) and (orientation: landscape) {
+        font-size: 19px;
     }
 }

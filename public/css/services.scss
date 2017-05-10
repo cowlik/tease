@@ -16,6 +16,10 @@
     @media (min-width: $screen-med) {
         padding: $spacing-max;
     }
+
+    @media (max-height: $screen-max-landscape-height) and (orientation: landscape) {
+        padding: 0;
+    }
 }
 
 .layer-back {
@@ -24,6 +28,10 @@
 
 .layer-front {
     @media (max-width: 499px) {
+        padding-bottom: 0;
+    }
+
+    @media (max-height: $screen-max-landscape-height) and (orientation: landscape) {
         padding-bottom: 0;
     }
 }
