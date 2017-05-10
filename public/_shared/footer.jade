@@ -7,19 +7,19 @@ footer#footer
             | Seattle, WA 98107
             br
             br
-            a(href="tel:#{tel}", onclick="ga('send', 'event', 'Phone - Footer', 'Click', '#{phone}');")= phone
+            a(href="tel:#{tel}", onclick="ga('send', 'event', 'Footer - Phone', 'Click', '#{phone}');")= phone
             br
-            a(href="mailto:#{email.melissa}", onclick="ga('send', 'event', 'Email - Footer - Melissa', 'Click', '#{email.melissa}');") Melissa
+            a(href="mailto:#{email.melissa}", onclick="ga('send', 'event', 'Footer - Email - Melissa', 'Click', '#{email.melissa}');") Melissa
             br
-            a(href="mailto:#{email.nicka}", onclick="ga('send', 'event', 'Email - Footer - Nicka', 'Click', '#{email.nicka}');") Nicka
+            a(href="mailto:#{email.nicka}", onclick="ga('send', 'event', 'Footer - Email - Nicka', 'Click', '#{email.nicka}');") Nicka
             br
             br
             span(class="footer-copyright") &copy; 2017
     div
         p
-            a(href="#{yelp.url}", target="_blank", onclick="ga('send', 'event', 'Yelp - Footer', 'Click', '#{yelp.url}');")
+            a(href="#{yelp.url}", target="_blank", onclick="ga('send', 'event', 'Footer - Yelp', 'Click', '#{yelp.url}');")
                 span(class="fa fa-yelp")
-            a(href="#{facebook.url}", target="_blank", onclick="ga('send', 'event', 'Facebook - Footer', 'Click', '#{facebook.url}');")
+            a(href="#{facebook.url}", target="_blank", onclick="ga('send', 'event', 'Footer - Facebook', 'Click', '#{facebook.url}');")
                 span(class="fa fa-facebook-square")
-            a(href="#{instagram.url}", target="_blank", onclick="ga('send', 'event', 'Instagram - Footer', 'Click', '#{instagram.url}');")
+            a(href="#{instagram.url}", target="_blank", onclick="ga('send', 'event', 'Footer - Instagram', 'Click', '#{instagram.url}');")
                 span(class="fa fa-instagram")
