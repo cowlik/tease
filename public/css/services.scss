@@ -6,19 +6,16 @@
 
 @import "_shared/accordion";
 
-.layer-front-content {
-    padding: 0;
-
-    @media (min-width: 500px) {
-        padding: 0 $spacing-min;
+.layers {
+    h1 {
+        margin: 0;
+        padding-bottom: 7%;
     }
 
     @media (min-width: $screen-med) {
-        padding: $spacing-max;
-    }
-
-    @media (max-height: $screen-max-landscape-height) and (orientation: landscape) {
-        padding: 0;
+        h1 {
+            padding-bottom: $spacing-max;
+        }
     }
 }
 
@@ -27,11 +24,7 @@
 }
 
 .layer-front {
-    @media (max-width: 499px) {
-        padding-bottom: 0;
-    }
-
-    @media (max-height: $screen-max-landscape-height) and (orientation: landscape) {
-        padding-bottom: 0;
+    @media (min-width: $screen-med) {
+        padding-bottom: $spacing-max * 2;
     }
 }

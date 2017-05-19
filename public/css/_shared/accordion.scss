@@ -4,8 +4,14 @@
 $border-color-orange-light: lighten($color-orange, 32%);
 
 .accordion {
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #eee;
     text-align: left;
+
+    sup {
+        @include font-regular();
+        top: -3px;
+        left: -1px;
+    }
 
     h3 {
         @include font-medium();
@@ -13,7 +19,6 @@ $border-color-orange-light: lighten($color-orange, 32%);
         font-size: 17px;
 
         + p {
-            @include font-italic();
             margin-top: 10px;
         }
     }
@@ -25,8 +30,6 @@ $border-color-orange-light: lighten($color-orange, 32%);
     }
 
     @media (min-width: 500px) {
-        border-bottom-color: #eee;
-
         h3 {
             font-size: 20px;
         }
@@ -47,8 +50,6 @@ $border-color-orange-light: lighten($color-orange, 32%);
     }
 
     @media (max-height: $screen-max-landscape-height) and (orientation: landscape) {
-        border-bottom-color: #fff;
-
         h3 {
             font-size: 17px;
         }
