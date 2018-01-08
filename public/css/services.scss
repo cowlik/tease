@@ -28,3 +28,20 @@
         padding-bottom: $spacing-max * 2;
     }
 }
+
+.accordion {
+    + p {
+        margin-top: $spacing-min;
+        text-align: left;
+
+        span {
+            @include font-medium();
+        }
+    }
+
+    @media (min-width: $screen-med) {
+        + p {
+            margin-top: $spacing-max;
+        }
+    }
+}
