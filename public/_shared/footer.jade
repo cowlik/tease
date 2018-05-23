@@ -1,4 +1,5 @@
 ﻿- var tel = phone.replace(/\./g, "")
+- var year = new Date().getFullYear();
 
 footer#footer
     div
@@ -14,7 +15,7 @@ footer#footer
             a(href="mailto:#{email.nicka}", onclick="ga('send', 'event', 'Footer - Email - Nicka', 'Click', '#{email.nicka}');") Nicka
             br
             br
-            span(class="footer-copyright") &copy; 2017
+            span(class="footer-copyright") &copy;#{year}
     div
         p
             a(href="#{yelp.url}", target="_blank", onclick="ga('send', 'event', 'Footer - Yelp', 'Click', '#{yelp.url}');")
