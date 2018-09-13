@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"> 
   <url>
-    <loc>http://www.teaseballard.com</loc> 
+    <loc>https://www.teaseballard.com</loc> 
   </url>
   <url>
-    <loc>http://www.teaseballard.com/about</loc> 
+    <loc>https://www.teaseballard.com/about</loc> 
   </url>
   <url>
-    <loc>http://www.teaseballard.com/book</loc> 
+    <loc>https://www.teaseballard.com/book</loc> 
   </url>
   <url>
-    <loc>http://www.teaseballard.com/contact</loc> 
+    <loc>https://www.teaseballard.com/contact</loc> 
   </url>
   <url>
-    <loc>http://www.teaseballard.com/find</loc> 
+    <loc>https://www.teaseballard.com/find</loc> 
   </url>
   <url>
-    <loc>http://www.teaseballard.com/services</loc> 
+    <loc>https://www.teaseballard.com/services</loc> 
   </url>
 </urlset>

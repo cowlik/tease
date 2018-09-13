@@ -1,46 +1,46 @@
 {
-  "globals": {
-    "title": "Tease",
-    "url": "http://www.teaseballard.com",
-    "description": "We are a full-service hair salon located in the Ballard neighborhood of Seattle. We provide cuts for all ages and genders, full custom-color services, texture options, smoothing treatments, make-up, facial waxing and custom styles for personal or group events.",
-    "keywords": "Seattle, Ballard, Washington, Nicka, Melissa, hair, salon, hair salon, full-service, color services, texture options, smoothing treatments, make-up, facial waxing, custom styles",
-    "phone": "206.486.0141",
-    "email": {
-      "melissa": "melissa@teaseballard.com",
-      "nicka": "nicka@teaseballard.com"
-    },
-    "facebook": {
-      "app_id": {
-        "prod": "1900714163493810",
-        "stage": "1900731456825414"
-      },
-      "url": "https://www.facebook.com/teaseballard"
-    },
-    "google": {
-      "maps": {
-        "api": {
-          "version": "3.26",
-          "key": "AIzaSyBhisRobxM2qcAi7TNXZmBnSbZPkPgcFpg"
+    "globals": {
+        "title": "Tease",
+        "url": "https://www.teaseballard.com",
+        "description": "We are a full-service hair salon located in the Ballard neighborhood of Seattle. We provide cuts for all ages and genders, full custom-color services, texture options, smoothing treatments, make-up, facial waxing and custom styles for personal or group events.",
+        "keywords": "Seattle, Ballard, Washington, Nicka, Melissa, hair, salon, hair salon, full-service, color services, texture options, smoothing treatments, make-up, facial waxing, custom styles",
+        "phone": "206.486.0141",
+        "email": {
+            "melissa": "melissa@teaseballard.com",
+            "nicka": "nicka@teaseballard.com"
         },
-        "directions": {
-          "url": "https://www.google.com/maps/dir//1417+NW+54th+St,+Seattle,+WA+98107/@47.6676609,-122.3788814,16z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x549015c9c7120cc9:0xe2eb96c744863aa3!2m2!1d-122.374504!2d47.667661?hl=en"
+        "facebook": {
+            "app_id": {
+                "prod": "1900714163493810",
+                "stage": "1900731456825414"
+            },
+            "url": "https://www.facebook.com/teaseballard"
+        },
+        "google": {
+            "maps": {
+                "api": {
+                    "version": "3.26",
+                    "key": "AIzaSyBhisRobxM2qcAi7TNXZmBnSbZPkPgcFpg"
+                },
+                "directions": {
+                    "url": "https://www.google.com/maps/dir//1417+NW+54th+St,+Seattle,+WA+98107/@47.6676609,-122.3788814,16z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x549015c9c7120cc9:0xe2eb96c744863aa3!2m2!1d-122.374504!2d47.667661?hl=en"
+                }
+            }
+        },
+        "instagram": {
+            "url": "https://www.instagram.com/teaseballard"
+        },
+        "salon_iris": {
+            "plugin": {
+                "id": "464b1623-9e43-4da0-a0d3-ef354e8ce62d",
+                "url": "https://olb.saloniris.com"
+            }
+        },
+        "vagaro": {
+            "url": "https://www.vagaro.com/tease"
+        },
+        "yelp": {
+            "url": "https://www.yelp.com/biz/tease-seattle"
         }
-      }
-    },
-    "instagram": {
-      "url": "https://www.instagram.com/teaseballard"
-    },
-    "salon_iris": {
-      "plugin": {
-        "id": "464b1623-9e43-4da0-a0d3-ef354e8ce62d",
-        "url": "https://olb.saloniris.com"
-      }
-    },
-    "vagaro": {
-      "url": "https://www.vagaro.com/tease"
-    },
-    "yelp": {
-      "url": "https://www.yelp.com/biz/tease-seattle"
     }
-  }
 }
