@@ -1,6 +1,7 @@
 ﻿- var page = current.path[0]
 
 if environment == "production"
+    script(src="/js/fonts.min.js")
     link(rel="stylesheet", href="/css/tease.min.css")
 
     if page == "index"
@@ -15,6 +16,7 @@ if environment == "production"
     else if page == "services"
         link(rel="stylesheet", href="/css/services.min.css")
 else
+    script(src="/js/fonts.js")
     link(rel="stylesheet", href="/css/tease.css")
 
     if page == "index"
