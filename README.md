@@ -2,27 +2,31 @@
 
 ## Development Setup
 
-### 1. Install Global Dependencies:
+### 1. Install global dependencies:
 
 > #### [Node.js](https://nodejs.org/en/download/)
 
 > #### Harp
+
     npm install -g harp
 
 > #### Gulp:
+
     npm install -g gulp-cli
 
-### 2. Install Project Dependencies:
->     cd "C:\Users\..."
+### 2. Install project dependencies:
+
+    cd "C:\Users\..."
     npm install
 
-### 3. Run Harp Server:
->     harp server
+### 3. Run server:
 
-> Open browser and type `localhost:9000`
+    harp server
 
-### 4. Compile Harp Site:
->     gulp 
+### 4. Compile & minify:
+
+    harp compile
+    gulp
 
 ---
 
