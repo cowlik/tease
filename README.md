@@ -1,29 +1,23 @@
 # Tease
 
-## Development Setup
+_Website developed for Tease, a full service hair salon, located in Seattle, WA._
+[archive.cowlik.com/teaseballard](http://www.archive.cowlik.com/teaseballard)
 
-### 1. Install global dependencies:
+### Setup:
 
-> #### [Node.js](https://nodejs.org/en/download/)
+### 1. Install [Gulp](https://gulpjs.com/)
 
-> #### [Harp](http://harpjs.com)
+`npm install -g gulp-cli`
 
-    npm install -g harp
+### 2. Install dependencies:
 
-> #### [Gulp](https://gulpjs.com/)
+`cd "C:\Users\..."`
+`npm install`
 
-    npm install -g gulp-cli
+### 3. Start server:
 
-### 2. Install dev dependencies:
-
-    cd "C:\Users\..."
-    npm install
-
-### 3. Run server:
-
-    harp server
+`npm start`
 
 ### 4. Compile & minify:
 
-    harp compile
-    gulp
+`npm run build`
