@@ -6,11 +6,11 @@
 
 > #### [Node.js](https://nodejs.org/en/download/)
 
-> #### Harp
+> #### [Harp](http://harpjs.com)
 
     npm install -g harp
 
-> #### Gulp:
+> #### [Gulp](https://gulpjs.com/)
 
     npm install -g gulp-cli
 
@@ -27,15 +27,3 @@
 
     harp compile
     gulp
-
----
-
-#### Resources:
-
-> [Harp](http://harpjs.com)
-
-> [Jade](http://jade-lang.com/)
-
-> [SASS](http://sass-lang.com/)
-
-> [Markdown](https://daringfireball.net/projects/markdown/)

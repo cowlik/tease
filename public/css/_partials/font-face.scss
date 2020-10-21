@@ -12,23 +12,23 @@
  * You may obtain a valid license at the URLs below.
  * 
  * Webfont: TypewriterSerial-Italic by SoftMaker
- * URL: https://www.myfonts.com/fonts/softmaker/typewriter-serial/italic/
+ * URL: https://www.myfonts.com/./fonts/softmaker/typewriter-serial/italic/
  * Licensed pageviews: 1,000,000
  * 
  * Webfont: TypewriterSerial-Medium by SoftMaker
- * URL: https://www.myfonts.com/fonts/softmaker/typewriter-serial/medium/
+ * URL: https://www.myfonts.com/./fonts/softmaker/typewriter-serial/medium/
  * Licensed pageviews: 1,000,000
  * 
  * Webfont: TypewriterSerial-Xbold by SoftMaker
- * URL: https://www.myfonts.com/fonts/softmaker/typewriter-serial/xbold/
+ * URL: https://www.myfonts.com/./fonts/softmaker/typewriter-serial/xbold/
  * Licensed pageviews: 1,000,000
  * 
  * Webfont: TypewriterSerial-Bold by SoftMaker
- * URL: https://www.myfonts.com/fonts/softmaker/typewriter-serial/bold/
+ * URL: https://www.myfonts.com/./fonts/softmaker/typewriter-serial/bold/
  * Licensed pageviews: 1,000,000
  * 
  * Webfont: TypewriterSerial by SoftMaker
- * URL: https://www.myfonts.com/fonts/softmaker/typewriter-serial/regular/
+ * URL: https://www.myfonts.com/./fonts/softmaker/typewriter-serial/regular/
  * Licensed pageviews: 2,000,000
  * 
  * 
@@ -38,34 +38,54 @@
  * © 2018 MyFonts Inc
 */
 
-@import url("//hello.myfonts.net/count/3790ec");
+@import url('//hello.myfonts.net/count/3790ec');
 
 @font-face {
-    font-family: "TypewriterSerial-Italic";
-    src: url("fonts/3790EC_0_0.eot");
-    src: url("fonts/3790EC_0_0.eot?#iefix") format("embedded-opentype"),url("fonts/3790EC_0_0.woff2") format("woff2"),url("fonts/3790EC_0_0.woff") format("woff"),url("fonts/3790EC_0_0.ttf") format("truetype"),url("fonts/3790EC_0_0.svg#wf") format("svg");
+	font-family: 'TypewriterSerial-Italic';
+	src: url('./fonts/3790EC_0_0.eot');
+	src: url('./fonts/3790EC_0_0.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/3790EC_0_0.woff2') format('woff2'),
+		url('./fonts/3790EC_0_0.woff') format('woff'),
+		url('./fonts/3790EC_0_0.ttf') format('truetype'),
+		url('./fonts/3790EC_0_0.svg#wf') format('svg');
 }
 
 @font-face {
-    font-family: "TypewriterSerial-Medium";
-    src: url("fonts/3790EC_1_0.eot");
-    src: url("fonts/3790EC_1_0.eot?#iefix") format("embedded-opentype"),url("fonts/3790EC_1_0.woff2") format("woff2"),url("fonts/3790EC_1_0.woff") format("woff"),url("fonts/3790EC_1_0.ttf") format("truetype"),url("fonts/3790EC_1_0.svg#wf") format("svg");
+	font-family: 'TypewriterSerial-Medium';
+	src: url('./fonts/3790EC_1_0.eot');
+	src: url('./fonts/3790EC_1_0.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/3790EC_1_0.woff2') format('woff2'),
+		url('./fonts/3790EC_1_0.woff') format('woff'),
+		url('./fonts/3790EC_1_0.ttf') format('truetype'),
+		url('./fonts/3790EC_1_0.svg#wf') format('svg');
 }
 
 @font-face {
-    font-family: "TypewriterSerial-Xbold";
-    src: url("fonts/3790EC_2_0.eot");
-    src: url("fonts/3790EC_2_0.eot?#iefix") format("embedded-opentype"),url("fonts/3790EC_2_0.woff2") format("woff2"),url("fonts/3790EC_2_0.woff") format("woff"),url("fonts/3790EC_2_0.ttf") format("truetype"),url("fonts/3790EC_2_0.svg#wf") format("svg");
+	font-family: 'TypewriterSerial-Xbold';
+	src: url('./fonts/3790EC_2_0.eot');
+	src: url('./fonts/3790EC_2_0.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/3790EC_2_0.woff2') format('woff2'),
+		url('./fonts/3790EC_2_0.woff') format('woff'),
+		url('./fonts/3790EC_2_0.ttf') format('truetype'),
+		url('./fonts/3790EC_2_0.svg#wf') format('svg');
 }
 
 @font-face {
-    font-family: "TypewriterSerial-Bold";
-    src: url("fonts/3790EC_3_0.eot");
-    src: url("fonts/3790EC_3_0.eot?#iefix") format("embedded-opentype"),url("fonts/3790EC_3_0.woff2") format("woff2"),url("fonts/3790EC_3_0.woff") format("woff"),url("fonts/3790EC_3_0.ttf") format("truetype"),url("fonts/3790EC_3_0.svg#wf") format("svg");
+	font-family: 'TypewriterSerial-Bold';
+	src: url('./fonts/3790EC_3_0.eot');
+	src: url('./fonts/3790EC_3_0.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/3790EC_3_0.woff2') format('woff2'),
+		url('./fonts/3790EC_3_0.woff') format('woff'),
+		url('./fonts/3790EC_3_0.ttf') format('truetype'),
+		url('./fonts/3790EC_3_0.svg#wf') format('svg');
 }
 
 @font-face {
-    font-family: "TypewriterSerial";
-    src: url("fonts/3790EC_4_0.eot");
-    src: url("fonts/3790EC_4_0.eot?#iefix") format("embedded-opentype"),url("fonts/3790EC_4_0.woff2") format("woff2"),url("fonts/3790EC_4_0.woff") format("woff"),url("fonts/3790EC_4_0.ttf") format("truetype"),url("fonts/3790EC_4_0.svg#wf") format("svg");
+	font-family: 'TypewriterSerial';
+	src: url('./fonts/3790EC_4_0.eot');
+	src: url('./fonts/3790EC_4_0.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/3790EC_4_0.woff2') format('woff2'),
+		url('./fonts/3790EC_4_0.woff') format('woff'),
+		url('./fonts/3790EC_4_0.ttf') format('truetype'),
+		url('./fonts/3790EC_4_0.svg#wf') format('svg');
 }
