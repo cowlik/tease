@@ -14,7 +14,7 @@
 
     npm install -g gulp-cli
 
-### 2. Install project dependencies:
+### 2. Install dev dependencies:
 
     cd "C:\Users\..."
     npm install
