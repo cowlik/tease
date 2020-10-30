@@ -15,13 +15,13 @@ section.layers
                         br 
                         | Seattle, WA 98107
                     div
-                        a(href="tel:#{tel}", onclick="ga('send', 'event', 'Contact - Phone', 'Click', '#{phone}');")= phone
+                        a(href="tel:#")= phone
                         br
-                        a(href="mailto:#{email.melissa}", onclick="ga('send', 'event', 'Contact - Email - Melissa', 'Click', '#{email.melissa}');") Melissa
+                        a(href="mailto:#") Melissa
                         br
-                        a(href="mailto:#{email.nicka}", onclick="ga('send', 'event', 'Contact - Email - Nicka', 'Click', '#{email.nicka}');") Nicka
+                        a(href="mailto:#") Nicka
                     br
-                    a(href="/find", target="_blank", class="button", onclick="ga('send', 'event', 'Contact - Find', 'Click', '#{google.maps.directions.url}');") Get Directions
+                    a(href="#", class="button") Get Directions
             div#hours
                 div.layer-rule
                     != partial("_shared/rule")

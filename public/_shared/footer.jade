@@ -8,19 +8,19 @@ footer#footer
             | Seattle, WA 98107
             br
             br
-            a(href="tel:#{tel}", onclick="ga('send', 'event', 'Footer - Phone', 'Click', '#{phone}');")= phone
+            a(href="tel:#")= phone
             br
-            a(href="mailto:#{email.melissa}", onclick="ga('send', 'event', 'Footer - Email - Melissa', 'Click', '#{email.melissa}');") Melissa
+            a(href="mailto:#") Melissa
             br
-            a(href="mailto:#{email.nicka}", onclick="ga('send', 'event', 'Footer - Email - Nicka', 'Click', '#{email.nicka}');") Nicka
+            a(href="mailto:#") Nicka
             br
             br
             span(class="footer-copyright") &copy;#{year}
     div
         p
-            a(href="#{yelp.url}", target="_blank", onclick="ga('send', 'event', 'Footer - Yelp', 'Click', '#{yelp.url}');")
+            a(href="#{yelp.url}", target="_blank")
                 span(class="fa fa-yelp")
-            a(href="#{facebook.url}", target="_blank", onclick="ga('send', 'event', 'Footer - Facebook', 'Click', '#{facebook.url}');")
+            a(href="#{facebook.url}", target="_blank")
                 span(class="fa fa-facebook-square")
-            a(href="#{instagram.url}", target="_blank", onclick="ga('send', 'event', 'Footer - Instagram', 'Click', '#{instagram.url}');")
+            a(href="#{instagram.url}", target="_blank")
                 span(class="fa fa-instagram")
