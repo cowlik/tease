@@ -1,10 +1,11 @@
 # Tease
 
-_Website developed for Tease, a full service hair salon, located in Seattle, WA._
+_Website designed & developed for Tease, a full service hair salon, located in Seattle, WA._
 
-[archive.cowlik.com/teaseballard](http://www.archive.cowlik.com/teaseballard)
+[teaseballard.com](https://teaseballard.com)
 
-***
+---
+
 ### Setup:
 
 ### 1. Install [Gulp](https://gulpjs.com/)
