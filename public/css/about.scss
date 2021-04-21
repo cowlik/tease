@@ -1,123 +1,123 @@
 // about
 // --------------------------------------------------
 
-@import "_font-awesome-4.7.0/font-awesome";
+@import '_font-awesome-4.7.0/font-awesome';
 
-@import "_partials/variables";
-@import "_partials/mixins";
+@import '_partials/variables';
+@import '_partials/mixins';
 
 .layers {
-    h1 {
-        margin: 0;
-    }
+	h1 {
+		margin: 0;
+	}
 }
 
 .layer-back {
-    background-image: url("#{$path-imgs}about/girls.jpg");
+	background-image: url('#{$path-imgs}services/stations.jpg');
 }
 
 #intro-content {
-    margin: 6% 0;
-    padding-bottom: 30px;
+	margin: 6% 0;
+	padding-bottom: 30px;
 
-    @media (min-width: $screen-med) {
-        margin: 0;
-        padding-bottom: 60px;
-    }
+	@media (min-width: $screen-med) {
+		margin: 0;
+		padding-bottom: 60px;
+	}
 }
 
 #team {
-    margin-bottom: $spacing-min;
-    
-    ul {
-        list-style: none;
-    }
+	margin-bottom: $spacing-min;
 
-    li {
-        padding: $spacing-max 0;
-        border-bottom: 2px solid #eee;
+	ul {
+		list-style: none;
+	}
 
-        &:first-child {
-            padding-top: 20px;
-        }
+	li {
+		padding: $spacing-max 0;
+		border-bottom: 2px solid #eee;
 
-        &:last-child {
-            padding-bottom: 0;
-            border-bottom: 0;
-        }
-    }
+		&:first-child {
+			padding-top: 20px;
+		}
 
-    h3 {
-        margin-bottom: 15px;
-    }
+		&:last-child {
+			padding-bottom: 0;
+			border-bottom: 0;
+		}
+	}
 
-    a[href^="mailto"] {
-        display: inline-block;
+	h3 {
+		margin-bottom: 15px;
+	}
 
-        &:before {
-            @include fa-icon();
-            content: $fa-var-envelope-square;
-            font-size: 32px;
-        }
-    }
+	a[href^='mailto'] {
+		display: inline-block;
 
-    @media (min-width: $screen-med) {
-        margin-bottom: 0;
-        padding-bottom: 0;
+		&:before {
+			@include fa-icon();
+			content: $fa-var-envelope-square;
+			font-size: 32px;
+		}
+	}
 
-        ul {
-            text-align: left;
-        }
+	@media (min-width: $screen-med) {
+		margin-bottom: 0;
+		padding-bottom: 0;
 
-        li {
-            padding: 60px 0;
+		ul {
+			text-align: left;
+		}
 
-            &:nth-child(even) {
-                .team-headshot {
-                    margin-right: 0;
-                    margin-left: $spacing-max;
-                    float: right;
-                }
-            }
+		li {
+			padding: 60px 0;
 
-            &:first-child {
-                padding-top: $spacing-min;
-            }
+			&:nth-child(even) {
+				.team-headshot {
+					margin-right: 0;
+					margin-left: $spacing-max;
+					float: right;
+				}
+			}
 
-            &:last-child {
-                padding-bottom: $spacing-max;
-            }
-        }
+			&:first-child {
+				padding-top: $spacing-min;
+			}
 
-        a[href^="mailto"] {
-            &:before {
-                font-size: 40px;
-            }
-        }
+			&:last-child {
+				padding-bottom: $spacing-max;
+			}
+		}
 
-        .layer-rule {
-            padding-top: 30px;
-            padding-bottom: 30px;
-        }
-    }
+		a[href^='mailto'] {
+			&:before {
+				font-size: 40px;
+			}
+		}
+
+		.layer-rule {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+	}
 }
 
 .team-headshot {
-    max-width: 300px;
-    max-height: 300px;
-    margin: 0 $spacing-min $spacing-min;
-    border-radius: 50%;
-    overflow: hidden;
-    display: inline-block;
+	max-width: 300px;
+	max-height: 300px;
+	margin: 0 $spacing-min $spacing-min;
+	border-radius: 50%;
+	overflow: hidden;
+	display: inline-block;
 
-    img {
-        width: 100%;
-        height: auto;
-    }
+	img {
+		width: 100%;
+		height: auto;
+	}
 
-    @media (min-width: $screen-med) {
-        margin-right: $spacing-max;
-        margin-left: 0;
-        float: left;
-    }
+	@media (min-width: $screen-med) {
+		margin-right: $spacing-max;
+		margin-left: 0;
+		float: left;
+	}
 }

@@ -11,17 +11,15 @@ section.layers
                 div.layer-rule.layer-rule-bottom
                     != partial("_shared/rule")
                 div#info-content
-                    p 1417 NW 54th St #105
+                    p 5325 Ballard Ave NW #212
                         br 
                         | Seattle, WA 98107
                     div
-                        a(href="tel:#")= phone
+                        a(href="tel:#{tel}", onclick="ga('send', 'event', 'Contact - Phone', 'Click', '#{phone}');")= phone
                         br
-                        a(href="mailto:#") Melissa
-                        br
-                        a(href="mailto:#") Nicka
+                        a(href="mailto:#{email.melissa}", onclick="ga('send', 'event', 'Contact - Email - Melissa', 'Click', '#{email.melissa}');") Melissa
                     br
-                    a(href="#", class="button") Get Directions
+                    a(href="/find", target="_blank", class="button", onclick="ga('send', 'event', 'Contact - Find', 'Click', '#{google.maps.directions.url}');") Get Directions
             div#hours
                 div.layer-rule
                     != partial("_shared/rule")
@@ -37,7 +35,7 @@ section.layers
                         |&nbsp;Closed
                     li
                         span Tuesday -
-                        |&nbsp;11am - 7pm
+                        |&nbsp;12pm - 7pm
                     li
                         span Wednesday -
                         |&nbsp;11am - 7pm

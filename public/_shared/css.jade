@@ -1,20 +1,21 @@
 ﻿- var page = current.path[0]
+- var version = 1
 
 if environment == "production"
     script(src="./js/fonts.min.js")
-    link(rel="stylesheet", href="./css/tease.min.css")
+    link(rel="stylesheet", href="./css/tease.min.css?v=#{version}")
 
     if page == "index"
-        link(rel="stylesheet", href="./css/home.min.css")
+        link(rel="stylesheet", href="./css/home.min.css?v=#{version}")
 
     else if page == "about"
-        link(rel="stylesheet", href="./css/about.min.css")
+        link(rel="stylesheet", href="./css/about.min.css?v=#{version}")
 
     else if page == "contact"
-        link(rel="stylesheet", href="./css/contact.min.css")
+        link(rel="stylesheet", href="./css/contact.min.css?v=#{version}")
 
     else if page == "services"
-        link(rel="stylesheet", href="./css/services.min.css")
+        link(rel="stylesheet", href="./css/services.min.css?v=#{version}")
 else
     script(src="./js/fonts.js")
     link(rel="stylesheet", href="./css/tease.css")

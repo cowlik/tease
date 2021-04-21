@@ -3,24 +3,22 @@
 
 footer#footer
     div
-        p 1417 NW 54th St #105
+        p 5325 Ballard Ave NW #212
             br 
             | Seattle, WA 98107
             br
             br
-            a(href="tel:#")= phone
+            a(href="tel:#{tel}", onclick="ga('send', 'event', 'Footer - Phone', 'Click', '#{phone}');")= phone
             br
-            a(href="mailto:#") Melissa
-            br
-            a(href="mailto:#") Nicka
+            a(href="mailto:#{email.melissa}", onclick="ga('send', 'event', 'Footer - Email - Melissa', 'Click', '#{email.melissa}');") Melissa
             br
             br
             span(class="footer-copyright") &copy;#{year}
     div
         p
-            a(href="#{yelp.url}", target="_blank")
+            a(href="#{yelp.url}", target="_blank", onclick="ga('send', 'event', 'Footer - Yelp', 'Click', '#{yelp.url}');")
                 span(class="fa fa-yelp")
-            a(href="#{facebook.url}", target="_blank")
+            a(href="#{facebook.url}", target="_blank", onclick="ga('send', 'event', 'Footer - Facebook', 'Click', '#{facebook.url}');")
                 span(class="fa fa-facebook-square")
-            a(href="#{instagram.url}", target="_blank")
+            a(href="#{instagram.url}", target="_blank", onclick="ga('send', 'event', 'Footer - Instagram', 'Click', '#{instagram.url}');")
                 span(class="fa fa-instagram")
